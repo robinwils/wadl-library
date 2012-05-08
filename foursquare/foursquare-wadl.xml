@@ -132,20 +132,20 @@
 					Identity of the user to get details for. Pass self to get details of the acting user. For now, only "self" is supported
 				</doc>
 			</param>
-			<param name="limit" type="xsd:string" style="template" required="false">
+			<param name="limit" type="xsd:string" style="query" required="false">
 				<doc>Number of results to return, up to 500.</doc>
 			</param>
-			<param name="offset" type="xsd:string" style="template" required="false">
+			<param name="offset" type="xsd:string" style="query" required="false">
 				<doc>Used to page through results.</doc>
 			</param>
-			<param name="afterTimestamp" type="xsd:string" style="template" required="false">
+			<param name="afterTimestamp" type="xsd:string" style="query" required="false">
 				<doc>
 					Retrieve the first results to follow these seconds since epoch. This should be useful for paging forward in time, or
 					when polling for changes. To avoid missing results when polling, we recommend subtracting several seconds from the last
 					poll time and then de-deduplicating.
 				</doc>
 			</param>
-			<param name="beforeTimestamp" type="xsd:string" style="template" required="false">
+			<param name="beforeTimestamp" type="xsd:string" style="query" required="false">
 				<doc>Retrieve the first results prior to these seconds since epoch. Useful for paging backward in time.</doc>
 			</param>
 			<method id="getUserCheckins" name="GET">
@@ -182,10 +182,10 @@
 			<param name="USER_ID" type="xsd:string" style="template" required="true">
 				<doc>Identity of the user to get tips from. Pass self to get tips of the acting user.</doc>
 			</param>
-			<param name="sort" type="xsd:string" style="template" required="false">
+			<param name="sort" type="xsd:string" style="query" required="false">
 				<doc>One of recent, nearby, or popular. Nearby requires geolat and geolong to be provided.</doc>
 			</param>
-			<param name="ll" type="xsd:string" style="template" required="false">
+			<param name="ll" type="xsd:string" style="query" required="false">
 				<doc>Latitude and longitude of the user's location.</doc>
 			</param>
 			<method id="getUserTips" name="GET">
@@ -205,7 +205,7 @@
 			<param name="USER_ID" type="xsd:string" style="template" required="true">
 				<doc>Identity of the user to get todos for. Pass self to get todos of the acting user.</doc>
 			</param>
-			<param name="sort" type="xsd:string" style="template" required="false">
+			<param name="sort" type="xsd:string" style="query" required="false">
 				<doc>One of recent or popular. Nearby requires geolat and geolong to be provided.</doc>
 			</param>
 			<param name="ll" type="xsd:string" style="template" required="true">
@@ -949,16 +949,16 @@
 			<param name="ll" type="xsd:string" style="template" required="true">
 				<doc>Latitude and longitude to search near.</doc>
 			</param>
-			<param name="llAcc" type="xsd:string" style="template" required="false">
+			<param name="llAcc" type="xsd:string" style="query" required="false">
 				<doc>Accuracy of latitude and longitude, in meters.</doc>
 			</param>
-			<param name="alt" type="xsd:string" style="template" required="false">
+			<param name="alt" type="xsd:string" style="query" required="false">
 				<doc>Altitude of the user's location, in meters.</doc>
 			</param>
-			<param name="altAcc" type="xsd:string" style="template" required="false">
+			<param name="altAcc" type="xsd:string" style="query" required="false">
 				<doc>Accuracy of the user's altitude, in meters.</doc>
 			</param>
-			<param name="limit" type="xsd:string" style="template" required="false">
+			<param name="limit" type="xsd:string" style="query" required="false">
 				<doc>Number of results to return, up to 50.</doc>
 			</param>
 			<method id="getSpecials" name="GET">

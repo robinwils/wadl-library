@@ -5,7 +5,7 @@
 	xmlns="http://wadl.dev.java.net/2009/02" xmlns:t="urn:github:githubresponse"
 	xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://apigee.com/schemas/wadl-schema.xsd http://api.apigee.com/wadl/2010/07/ http://apigee.com/schemas/apigee-wadl-extensions.xsd">
 
-	<resources base="http://github.com/">
+	<resources base="http://github.com/api/v2">
 
 		<resource path="{format}/user/search/{username}">
 			<param name="format" type="xsd:string" style="template" required="true" default="json">
@@ -13,7 +13,7 @@
 				<option value="json" mediaType="application/json"/>
 				<option value="yaml" mediaType="application/yaml"/>
 			</param>
-			<param name="username" required="true" type="xsd:string" style="query" default="chacon"/>
+			<param name="username" required="true" type="xsd:string" style="template" default="chacon"/>
 			<method id="GetUsers" apigee:displayName="GetUsers" name="GET">
 				<apigee:tags>
 					<apigee:tag primary="true">Users</apigee:tag>
@@ -32,7 +32,7 @@
 				<option value="json" mediaType="application/json"/>
 				<option value="yaml" mediaType="application/yaml"/>
 			</param>
-			<param name="emailid" required="true" type="xsd:string" style="query" default="user@email.com"/>
+			<param name="emailid" required="true" type="xsd:string" style="template" default="user@email.com"/>
 			<method id="GetUsersByEmail" apigee:displayName="GetUsersByEmail" name="GET">
 				<apigee:tags>
 					<apigee:tag primary="true">Users</apigee:tag>
@@ -51,7 +51,7 @@
 				<option value="json" mediaType="application/json"/>
 				<option value="yaml" mediaType="application/yaml"/>
 			</param>
-			<param name="username" required="true" type="xsd:string" style="query" default="chacon"/>
+			<param name="username" required="true" type="xsd:string" style="template" default="chacon"/>
 			<method id="GetUser" apigee:displayName="GetUser" name="GET">
 				<apigee:tags>
 					<apigee:tag primary="true">Users</apigee:tag>
@@ -70,7 +70,7 @@
 				<option value="json" mediaType="application/json"/>
 				<option value="yaml" mediaType="application/yaml"/>
 			</param>
-			<param name="username" required="true" type="xsd:string" style="query" default="chacon"/>
+			<param name="username" required="true" type="xsd:string" style="template" default="chacon"/>
 			<method id="GetUserFollowing" apigee:displayName="GetUserFollowing" name="GET">
 				<apigee:tags>
 					<apigee:tag primary="true">Users</apigee:tag>
@@ -89,7 +89,7 @@
 				<option value="json" mediaType="application/json"/>
 				<option value="yaml" mediaType="application/yaml"/>
 			</param>
-			<param name="username" required="true" type="xsd:string" style="query" default="chacon"/>
+			<param name="username" required="true" type="xsd:string" style="template" default="chacon"/>
 			<method id="GetUserFollowers" apigee:displayName="GetUserFollowers" name="GET">
 				<apigee:tags>
 					<apigee:tag primary="true">Users</apigee:tag>
@@ -108,7 +108,7 @@
 				<option value="json" mediaType="application/json"/>
 				<option value="yaml" mediaType="application/yaml"/>
 			</param>
-			<param name="username" required="true" type="xsd:string" style="query" default="chacon"/>
+			<param name="username" required="true" type="xsd:string" style="template" default="chacon"/>
 			<method id="FollowUser" apigee:displayName="FollowUser" name="POST">
 				<apigee:tags>
 					<apigee:tag primary="true">Users</apigee:tag>
@@ -127,7 +127,7 @@
 				<option value="json" mediaType="application/json"/>
 				<option value="yaml" mediaType="application/yaml"/>
 			</param>
-			<param name="username" required="true" type="xsd:string" style="query" default="chacon"/>
+			<param name="username" required="true" type="xsd:string" style="template" default="chacon"/>
 			<method id="UnFollowUser" apigee:displayName="UnFollowUser"
 				name="POST">
 				<apigee:tags>
@@ -147,7 +147,7 @@
 				<option value="json" mediaType="application/json"/>
 				<option value="yaml" mediaType="application/yaml"/>
 			</param>
-			<param name="username" required="true" type="xsd:string" style="query" default="schacon"/>
+			<param name="username" required="true" type="xsd:string" style="template" default="schacon"/>
 			<method id="GetWatchedRepos" apigee:displayName="GetWatchedRepos" name="GET">
 				<apigee:tags>
 					<apigee:tag primary="true">Users</apigee:tag>
@@ -166,7 +166,7 @@
 				<option value="json" mediaType="application/json"/>
 				<option value="yaml" mediaType="application/yaml"/>
 			</param>
-			<param name="q" required="true" type="xsd:string" style="query" default="ruby+testing"/>
+			<param name="q" required="true" type="xsd:string" style="template" default="ruby+testing"/>
 			<method id="GetRepos" apigee:displayName="GetRepos" name="GET">
 				<apigee:tags>
 					<apigee:tag primary="true">Repository</apigee:tag>
@@ -185,8 +185,8 @@
 				<option value="json" mediaType="application/json"/>
 				<option value="yaml" mediaType="application/yaml"/>
 			</param>
-			<param name="username" required="true" type="xsd:string" style="query" default="schacon"/>
-			<param name="reponame" required="true" type="xsd:string" style="query" default="grit"/>
+			<param name="username" required="true" type="xsd:string" style="template" default="schacon"/>
+			<param name="reponame" required="true" type="xsd:string" style="template" default="grit"/>
 			<method id="GetRepo" apigee:displayName="GetRepo" name="GET">
 				<apigee:tags>
 					<apigee:tag primary="true">Repository</apigee:tag>
@@ -205,7 +205,7 @@
 				<option value="json" mediaType="application/json"/>
 				<option value="yaml" mediaType="application/yaml"/>
 			</param>
-			<param name="username" required="true" type="xsd:string" style="query" default="schacon"/>
+			<param name="username" required="true" type="xsd:string" style="template" default="schacon"/>
 			<method id="GetUserRepos" apigee:displayName="GetUserRepos" name="GET">
 				<apigee:tags>
 					<apigee:tag primary="true">Repository</apigee:tag>
@@ -224,8 +224,8 @@
 				<option value="json" mediaType="application/json"/>
 				<option value="yaml" mediaType="application/yaml"/>
 			</param>
-			<param name="username" required="true" type="xsd:string" style="query" default="schacon"/>
-			<param name="reponame" required="true" type="xsd:string" style="query" default="grit"/>
+			<param name="username" required="true" type="xsd:string" style="template" default="schacon"/>
+			<param name="reponame" required="true" type="xsd:string" style="template" default="grit"/>
 			<method id="GetForkedRepo" apigee:displayName="GetForkedRepo" name="GET">
 				<apigee:tags>
 					<apigee:tag primary="true">Repository</apigee:tag>
@@ -265,8 +265,8 @@
 				<option value="json" mediaType="application/json"/>
 				<option value="yaml" mediaType="application/yaml"/>
 			</param>
-			<param name="username" required="true" type="xsd:string" style="query" default="schacon"/>
-			<param name="reponame" required="true" type="xsd:string" style="query" default="grit"/>
+			<param name="username" required="true" type="xsd:string" style="template" default="schacon"/>
+			<param name="reponame" required="true" type="xsd:string" style="template" default="grit"/>
 			<method id="UnWatchRepo" apigee:displayName="UnWatchRepo" name="GET">
 				<apigee:tags>
 					<apigee:tag primary="true">Repository</apigee:tag>
@@ -285,8 +285,8 @@
 				<option value="json" mediaType="application/json"/>
 				<option value="yaml" mediaType="application/yaml"/>
 			</param>
-			<param name="username" required="true" type="xsd:string" style="query" default="schacon"/>
-			<param name="reponame" required="true" type="xsd:string" style="query" default="grit"/>
+			<param name="username" required="true" type="xsd:string" style="template" default="schacon"/>
+			<param name="reponame" required="true" type="xsd:string" style="template" default="grit"/>
 			<method id="WatchRepo" apigee:displayName="WatchRepo" name="GET">
 				<apigee:tags>
 					<apigee:tag primary="true">Repository</apigee:tag>
@@ -305,8 +305,8 @@
 				<option value="json" mediaType="application/json"/>
 				<option value="yaml" mediaType="application/yaml"/>
 			</param>
-			<param name="username" required="true" type="xsd:string" style="query" default="schacon"/>
-			<param name="reponame" required="true" type="xsd:string" style="query" default="grit"/>
+			<param name="username" required="true" type="xsd:string" style="template" default="schacon"/>
+			<param name="reponame" required="true" type="xsd:string" style="template" default="grit"/>
 			<method id="GetCollaborators" apigee:displayName="GetCollaborators" name="GET">
 				<apigee:tags>
 					<apigee:tag primary="true">Repository</apigee:tag>
@@ -325,8 +325,8 @@
 				<option value="json" mediaType="application/json"/>
 				<option value="yaml" mediaType="application/yaml"/>
 			</param>
-			<param name="username" required="true" type="xsd:string" style="query" default="schacon"/>
-			<param name="reponame" required="true" type="xsd:string" style="query" default="grit"/>
+			<param name="username" required="true" type="xsd:string" style="template" default="schacon"/>
+			<param name="reponame" required="true" type="xsd:string" style="template" default="grit"/>
 			<method id="DeleteRepo" apigee:displayName="DeleteRepo" name="DELETE">
 				<apigee:tags>
 					<apigee:tag primary="true">Repository</apigee:tag>
@@ -345,8 +345,8 @@
 				<option value="json" mediaType="application/json"/>
 				<option value="yaml" mediaType="application/yaml"/>
 			</param>
-			<param name="username" required="true" type="xsd:string" style="query" default="mxcl"/>
-			<param name="reponame" required="true" type="xsd:string" style="query" default="homebrew"/>
+			<param name="username" required="true" type="xsd:string" style="template" default="mxcl"/>
+			<param name="reponame" required="true" type="xsd:string" style="template" default="homebrew"/>
 			<method id="GetContributors" apigee:displayName="GetContributors" name="GET">
 				<apigee:tags>
 					<apigee:tag primary="true">Repository</apigee:tag>
@@ -365,8 +365,8 @@
 				<option value="json" mediaType="application/json"/>
 				<option value="yaml" mediaType="application/yaml"/>
 			</param>
-			<param name="username" required="true" type="xsd:string" style="query" default="claudiob"/>
-			<param name="reponame" required="true" type="xsd:string" style="query" default="csswaxer"/>
+			<param name="username" required="true" type="xsd:string" style="template" default="claudiob"/>
+			<param name="reponame" required="true" type="xsd:string" style="template" default="csswaxer"/>
 			<method id="GetWatchers" apigee:displayName="GetWatchers" name="GET">
 				<apigee:tags>
 					<apigee:tag primary="true">Repository</apigee:tag>
@@ -385,8 +385,8 @@
 				<option value="json" mediaType="application/json"/>
 				<option value="yaml" mediaType="application/yaml"/>
 			</param>
-			<param name="username" required="true" type="xsd:string" style="query" default="schacon"/>
-			<param name="reponame" required="true" type="xsd:string" style="query" default="ruby-git"/>
+			<param name="username" required="true" type="xsd:string" style="template" default="schacon"/>
+			<param name="reponame" required="true" type="xsd:string" style="template" default="ruby-git"/>
 			<method id="GetNetwork" apigee:displayName="GetNetwork" name="GET">
 				<apigee:tags>
 					<apigee:tag primary="true">Repository</apigee:tag>
@@ -405,8 +405,8 @@
 				<option value="json" mediaType="application/json"/>
 				<option value="yaml" mediaType="application/yaml"/>
 			</param>
-			<param name="username" required="true" type="xsd:string" style="query" default="mojombo" />
-			<param name="reponame" required="true" type="xsd:string" style="query" default="grit" />
+			<param name="username" required="true" type="xsd:string" style="template" default="mojombo" />
+			<param name="reponame" required="true" type="xsd:string" style="template" default="grit" />
 			<method id="GetRepoLanguages" apigee:displayName="GetRepoLanguages" name="GET">
 				<apigee:tags>
 					<apigee:tag primary="true">Repository</apigee:tag>
@@ -425,8 +425,8 @@
 				<option value="json" mediaType="application/json"/>
 				<option value="yaml" mediaType="application/yaml"/>
 			</param>
-			<param name="username" required="true" type="xsd:string" style="query" default="schacon"/>
-			<param name="reponame" required="true" type="xsd:string" style="query" default="ruby-git"/>
+			<param name="username" required="true" type="xsd:string" style="template" default="schacon"/>
+			<param name="reponame" required="true" type="xsd:string" style="template" default="ruby-git"/>
 			<method id="GetRepoTags" apigee:displayName="GetRepoTags" name="GET">
 				<apigee:tags>
 					<apigee:tag primary="true">Repository</apigee:tag>
@@ -445,7 +445,7 @@
 				<option value="json" mediaType="application/json"/>
 				<option value="yaml" mediaType="application/yaml"/>
 			</param>
-			<param name="orgname" required="true" type="xsd:string" style="query" default="github"/>
+			<param name="orgname" required="true" type="xsd:string" style="template" default="github"/>
 			<method id="GetOrg" apigee:displayName="GetOrg" name="GET">
 				<apigee:tags>
 					<apigee:tag primary="true">Organizations</apigee:tag>
@@ -464,7 +464,7 @@
 				<option value="json" mediaType="application/json"/>
 				<option value="yaml" mediaType="application/yaml"/>
 			</param>
-			<param name="username" required="true" type="xsd:string" style="query" default="technoweenie"/>
+			<param name="username" required="true" type="xsd:string" style="template" default="technoweenie"/>
 			<method id="GetPublicOrgs" apigee:displayName="GetPublicOrgs" name="GET">
 				<apigee:tags>
 					<apigee:tag primary="true">Organizations</apigee:tag>
@@ -501,7 +501,7 @@
 				<option value="json" mediaType="application/json"/>
 				<option value="yaml" mediaType="application/yaml"/>
 			</param>
-			<param name="orgname" required="true" type="xsd:string" style="query" default="github"/>
+			<param name="orgname" required="true" type="xsd:string" style="template" default="github"/>
 			<method id="GetOrgPublicRepos" apigee:displayName="GetOrgPublicRepos" name="GET">
 				<apigee:tags>
 					<apigee:tag primary="true">Organizations</apigee:tag>
@@ -520,7 +520,7 @@
 				<option value="json" mediaType="application/json"/>
 				<option value="yaml" mediaType="application/yaml"/>
 			</param>
-			<param name="orgname" required="true" type="xsd:string" style="query" default="github"/>
+			<param name="orgname" required="true" type="xsd:string" style="template" default="github"/>
 			<method id="GetOrgMembers" apigee:displayName="GetOrgMembers" name="GET">
 				<apigee:tags>
 					<apigee:tag primary="true">Organizations</apigee:tag>
@@ -539,7 +539,7 @@
 				<option value="json" mediaType="application/json"/>
 				<option value="yaml" mediaType="application/yaml"/>
 			</param>
-			<param name="orgname" required="true" type="xsd:string" style="query" default="github"/>
+			<param name="orgname" required="true" type="xsd:string" style="template" default="github"/>
 			<method id="GetOrgPublicMembers" apigee:displayName="GetOrgPublicMembers" name="GET">
 				<apigee:tags>
 					<apigee:tag primary="true">Organizations</apigee:tag>
@@ -558,7 +558,7 @@
 				<option value="json" mediaType="application/json"/>
 				<option value="yaml" mediaType="application/yaml"/>
 			</param>
-			<param name="orgname" required="true" type="xsd:string" style="query" default="github"/>
+			<param name="orgname" required="true" type="xsd:string" style="template" default="github"/>
 			<method id="GetTeamsOrgs" apigee:displayName="GetTeamsOrgs" name="GET">
 				<apigee:tags>
 					<apigee:tag primary="true">Teams</apigee:tag>
@@ -577,7 +577,7 @@
 				<option value="json" mediaType="application/json"/>
 				<option value="yaml" mediaType="application/yaml"/>
 			</param>
-			<param name="orgname" required="true" type="xsd:string" style="query" default="github" />
+			<param name="orgname" required="true" type="xsd:string" style="template" default="github" />
 			<method id="CreateTeam" apigee:displayName="CreateTeam" name="POST">
 				<apigee:tags>
 					<apigee:tag primary="true">Teams</apigee:tag>
@@ -609,7 +609,7 @@
 				<option value="json" mediaType="application/json"/>
 				<option value="yaml" mediaType="application/yaml"/>
 			</param>
-			<param name="teamid" required="true" type="xsd:int" style="query" default="10"/>
+			<param name="teamid" required="true" type="xsd:int" style="template" default="10"/>
 			<method id="GetTeam" apigee:displayName="GetTeam" name="GET">
 				<apigee:tags>
 					<apigee:tag primary="true">Teams</apigee:tag>
@@ -628,7 +628,7 @@
 				<option value="json" mediaType="application/json"/>
 				<option value="yaml" mediaType="application/yaml"/>
 			</param>
-			<param name="teamid" required="true" type="xsd:int" style="query" default="10"/>
+			<param name="teamid" required="true" type="xsd:int" style="template" default="10"/>
 			<method id="UpdateTeam" apigee:displayName="UpdateTeam" name="PUT">
 				<apigee:tags>
 					<apigee:tag primary="true">Teams</apigee:tag>
@@ -659,7 +659,7 @@
 				<option value="json" mediaType="application/json"/>
 				<option value="yaml" mediaType="application/yaml"/>
 			</param>
-			<param name="teamid" required="true" type="xsd:int" style="query" default="10"/>
+			<param name="teamid" required="true" type="xsd:int" style="template" default="10"/>
 			<method id="GetTeamUsers" apigee:displayName="GetTeamUsers" name="GET">
 				<apigee:tags>
 					<apigee:tag primary="true">Teams</apigee:tag>
@@ -678,8 +678,8 @@
 				<option value="json" mediaType="application/json"/>
 				<option value="yaml" mediaType="application/yaml"/>
 			</param>
-			<param name="teamid" required="true" type="xsd:int" style="query" default="10"/>
-			<param name="username" required="true" type="xsd:string" style="query" default="technoweenie"/>
+			<param name="teamid" required="true" type="xsd:int" style="template" default="10"/>
+			<param name="username" required="true" type="xsd:string" style="template" default="technoweenie"/>
 			<method id="AddTeamUser" apigee:displayName="AddTeamUser" name="POST">
 				<apigee:tags>
 					<apigee:tag primary="true">Teams</apigee:tag>
@@ -702,7 +702,7 @@
 				<option value="json" mediaType="application/json"/>
 				<option value="yaml" mediaType="application/yaml"/>
 			</param>
-			<param name="teamid" required="true" type="xsd:int" style="query" default="10"/>
+			<param name="teamid" required="true" type="xsd:int" style="template" default="10"/>
 			<param name="username" required="true" type="xsd:string" style="query" default="technoweenie"/>
 			<method id="DeleteTeamUser" apigee:displayName="DeleteTeamUser" name="DELETE">
 				<apigee:tags>
@@ -725,7 +725,7 @@
 				<option value="json" mediaType="application/json"/>
 				<option value="yaml" mediaType="application/yaml"/>
 			</param>
-			<param name="teamid" required="true" type="xsd:int" style="query" default="10"/>
+			<param name="teamid" required="true" type="xsd:int" style="template" default="10"/>
 			<method id="GetTeamRepos" apigee:displayName="GetTeamRepos" name="GET">
 				<apigee:tags>
 					<apigee:tag primary="true">Teams</apigee:tag>
@@ -744,7 +744,7 @@
 				<option value="json" mediaType="application/json"/>
 				<option value="yaml" mediaType="application/yaml"/>
 			</param>
-			<param name="teamid" required="true" type="xsd:int" style="query" default="10"/>
+			<param name="teamid" required="true" type="xsd:int" style="template" default="10"/>
 			<param name="username" required="true" type="xsd:string" style="query" default="technoweenie"/>
 			<method id="AddTeamRepo" apigee:displayName="AddTeamRepo" name="POST">
 				<apigee:tags>
@@ -756,7 +756,7 @@
 					Add a Repository to a Team.
 				</doc>
 				<request>
-					<param name="name" type="string" style="query" required="true" default="Apigee/Console"/>
+					<param name="name" type="string" style="template" required="true" default="Apigee/Console"/>
 				</request>
 			</method>
 		</resource>
@@ -767,7 +767,7 @@
 				<option value="json" mediaType="application/json"/>
 				<option value="yaml" mediaType="application/yaml"/>
 			</param>
-			<param name="teamid" required="true" type="xsd:int" style="query" default="10"/>
+			<param name="teamid" required="true" type="xsd:int" style="template" default="10"/>
 			<param name="username" required="true" type="xsd:string" style="query" default="technoweenie"/>
 			<method id="DeleteTeamRepo" apigee:displayName="DeleteTeamRepo" name="DELETE">
 				<apigee:tags>
@@ -784,16 +784,16 @@
 			</method>
 		</resource>
 
-		<resource path="{format}/commits/list/{userid}/{reponame}/{branchname}?page={num}">
+		<resource path="{format}/commits/list/{userid}/{reponame}/{branchname}">
 			<param name="format" type="xsd:string" style="template" required="true" default="json">
 				<option value="xml" mediaType="application/xml"/>
 				<option value="json" mediaType="application/json"/>
 				<option value="yaml" mediaType="application/yaml"/>
 			</param>
-			<param name="userid" required="true" type="xsd:string" style="query" default="mojombo"/>
-			<param name="reponame" required="true" type="xsd:string" style="query" default="grit"/>
-			<param name="branchname" required="true" type="xsd:string" style="query" default="master"/>
-			<param name="num" required="true" type="xsd:int" style="query" default="1"/>
+			<param name="userid" required="true" type="xsd:string" style="template" default="mojombo"/>
+			<param name="reponame" required="true" type="xsd:string" style="template" default="grit"/>
+			<param name="branchname" required="true" type="xsd:string" style="template" default="master"/>
+			<param name="page" required="true" type="xsd:int" style="query" default="1"/>
 			<method id="GetBranchCommits" apigee:displayName="GetBranchCommits" name="GET">
 				<apigee:tags>
 					<apigee:tag primary="true">Commits</apigee:tag>
@@ -812,10 +812,10 @@
 				<option value="json" mediaType="application/json"/>
 				<option value="yaml" mediaType="application/yaml"/>
 			</param>
-			<param name="userid" required="true" type="xsd:string" style="query" default="mojombo"/>
-			<param name="reponame" required="true" type="xsd:string" style="query" default="grit"/>
-			<param name="branchname" required="true" type="xsd:string" style="query" default="master"/>
-			<param name="path" required="true" type="xsd:string" style="query" default="grit.gemspec"/>
+			<param name="userid" required="true" type="xsd:string" style="template" default="mojombo"/>
+			<param name="reponame" required="true" type="xsd:string" style="template" default="grit"/>
+			<param name="branchname" required="true" type="xsd:string" style="template" default="master"/>
+			<param name="path" required="true" type="xsd:string" style="template" default="grit.gemspec"/>
 			<method id="GetFileCommits" apigee:displayName="GetFileCommits" name="GET">
 				<apigee:tags>
 					<apigee:tag primary="true">Commits</apigee:tag>
@@ -834,9 +834,9 @@
 				<option value="json" mediaType="application/json"/>
 				<option value="yaml" mediaType="application/yaml"/>
 			</param>
-			<param name="userid" required="true" type="xsd:string" style="query" default="mojombo"/>
-			<param name="reponame" required="true" type="xsd:string" style="query" default="grit"/>
-			<param name="sha" required="true" type="xsd:string" style="query" default="5071bf9fbfb81778c456d62e111440fdc776f76c"/>
+			<param name="userid" required="true" type="xsd:string" style="template" default="mojombo"/>
+			<param name="reponame" required="true" type="xsd:string" style="template" default="grit"/>
+			<param name="sha" required="true" type="xsd:string" style="template" default="5071bf9fbfb81778c456d62e111440fdc776f76c"/>
 			<method id="GetCommit" apigee:displayName="GetCommit" name="GET">
 				<apigee:tags>
 					<apigee:tag primary="true">Commits</apigee:tag>
@@ -855,8 +855,8 @@
 				<option value="json" mediaType="application/json"/>
 				<option value="yaml" mediaType="application/yaml"/>
 			</param>
-			<param name="username" required="true" type="xsd:string" style="query" default="schacon"/>
-			<param name="reponame" required="true" type="xsd:string" style="query" default="simplegit"/>
+			<param name="username" required="true" type="xsd:string" style="template" default="schacon"/>
+			<param name="reponame" required="true" type="xsd:string" style="template" default="simplegit"/>
 			<method id="GetNetworkMetadata" apigee:displayName="GetNetworkMetadata" name="GET">
 				<apigee:tags>
 					<apigee:tag primary="true">Secret Network</apigee:tag>
@@ -875,8 +875,8 @@
 				<option value="json" mediaType="application/json"/>
 				<option value="yaml" mediaType="application/yaml"/>
 			</param>
-			<param name="username" required="true" type="xsd:string" style="query" default="schacon"/>
-			<param name="reponame" required="true" type="xsd:string" style="query" default="simplegit"/>
+			<param name="username" required="true" type="xsd:string" style="template" default="schacon"/>
+			<param name="reponame" required="true" type="xsd:string" style="template" default="simplegit"/>
 			<param name="nethash" required="true" type="xsd:string" style="query" default="Use_Nethash_got_from_the_NetworkMetadata_call" />
 			<method id="GetNetworkData" apigee:displayName="GetNetworkData" name="GET">
 				<apigee:tags>
@@ -896,9 +896,9 @@
 				<option value="json" mediaType="application/json"/>
 				<option value="yaml" mediaType="application/yaml"/>
 			</param>
-			<param name="username" required="true" type="xsd:string" style="query" default="technoweenie"/>
-			<param name="reponame" required="true" type="xsd:string" style="query" default="faraday"/>
-			<param name="state" required="false" type="xsd:string" style="query" default="closed"/>
+			<param name="username" required="true" type="xsd:string" style="template" default="technoweenie"/>
+			<param name="reponame" required="true" type="xsd:string" style="template" default="faraday"/>
+			<param name="state" required="false" type="xsd:string" style="template" default="closed"/>
 			<method id="GetPullRequests" apigee:displayName="GetPullRequests" name="GET">
 				<apigee:tags>
 					<apigee:tag primary="true">Pull Request</apigee:tag>
@@ -917,9 +917,9 @@
 				<option value="json" mediaType="application/json"/>
 				<option value="yaml" mediaType="application/yaml"/>
 			</param>
-			<param name="username" required="true" type="xsd:string" style="query" default="technoweenie"/>
-			<param name="reponame" required="true" type="xsd:string" style="query" default="faraday"/>
-			<param name="num" required="true" type="xsd:int" style="query" default="10" />
+			<param name="username" required="true" type="xsd:string" style="template" default="technoweenie"/>
+			<param name="reponame" required="true" type="xsd:string" style="template" default="faraday"/>
+			<param name="num" required="true" type="xsd:int" style="template" default="10" />
 			<method id="GetPullRequestDiscussions" apigee:displayName="GetPullRequestDiscussions" name="GET">
 				<apigee:tags>
 					<apigee:tag primary="true">Pull Request</apigee:tag>
@@ -938,8 +938,8 @@
 				<option value="json" mediaType="application/json"/>
 				<option value="yaml" mediaType="application/yaml"/>
 			</param>
-			<param name="username" required="true" type="xsd:string" style="query" default="technoweenie"/>
-			<param name="reponame" required="true" type="xsd:string" style="query" default="faraday"/>
+			<param name="username" required="true" type="xsd:string" style="template" default="technoweenie"/>
+			<param name="reponame" required="true" type="xsd:string" style="template" default="faraday"/>
 			<param name="base" required="true" type="xsd:string" style="query" default="master"/>
 			<param name="head" required="true" type="xsd:string" style="query" default="smparkes:synchrony"/>
 			<param name="title" required="true" type="xsd:string" style="query" default="Krishna"/>
@@ -956,15 +956,15 @@
 			</method>
 		</resource>
 		
-		<resource path="{format}/tree/show/{username}/{reponame}/a47803c9ba26213ff194f042ab686a7749b17476">
+		<resource path="{format}/tree/show/{username}/{reponame}/{tree_sha}">
 			<param name="format" type="xsd:string" style="template" required="true" default="json">
 				<option value="xml" mediaType="application/xml"/>
 				<option value="json" mediaType="application/json"/>
 				<option value="yaml" mediaType="application/yaml"/>
 			</param>
-			<param name="username" required="true" type="xsd:string" style="query" default="defunkt"/>
-			<param name="reponame" required="true" type="xsd:string" style="query" default="facebox"/>
-			<param name="tree_sha" required="true" type="xsd:string" style="query" default="a47803c9ba26213ff194f042ab686a7749b17476"/>
+			<param name="username" required="true" type="xsd:string" style="template" default="defunkt"/>
+			<param name="reponame" required="true" type="xsd:string" style="template" default="facebox"/>
+			<param name="tree_sha" required="true" type="xsd:string" style="template" default="a47803c9ba26213ff194f042ab686a7749b17476"/>
 			<method id="GetTreeContents" apigee:displayName="GetTreeContents" name="GET">
 				<apigee:tags>
 					<apigee:tag primary="true">Git Object</apigee:tag>
@@ -977,17 +977,17 @@
 			</method>
 		</resource>
 
-		<resource path="{format}/blob/show/{username}/{reponame}/365b84e0fd92c47ecdada91da47f2d67500b8e31/{path}?meta={num}">
+		<resource path="{format}/blob/show/{username}/{reponame}/{tree_sha}/{path}">
 			<param name="format" type="xsd:string" style="template" required="true" default="json">
 				<option value="xml" mediaType="application/xml"/>
 				<option value="json" mediaType="application/json"/>
 				<option value="yaml" mediaType="application/yaml"/>
 			</param>
-			<param name="username" required="true" type="xsd:string" style="query" default="defunkt"/>
-			<param name="reponame" required="true" type="xsd:string" style="query" default="facebox"/>
-			<param name="tree_sha" required="true" type="xsd:string" style="query" default="365b84e0fd92c47ecdada91da47f2d67500b8e31"/>
-			<param name="path" required="true" type="xsd:string" style="query" default="readme.txt"/>
-			<param name="num" required="false" type="xsd:int" style="query" default="1"/>
+			<param name="username" required="true" type="xsd:string" style="template" default="defunkt"/>
+			<param name="reponame" required="true" type="xsd:string" style="template" default="facebox"/>
+			<param name="tree_sha" required="true" type="xsd:string" style="template" default="365b84e0fd92c47ecdada91da47f2d67500b8e31"/>
+			<param name="path" required="true" type="xsd:string" style="template" default="readme.txt"/>
+			<param name="meta" required="false" type="xsd:int" style="query" default="1"/>
 			<method id="GetBlob" apigee:displayName="GetBlob" name="GET">
 				<apigee:tags>
 					<apigee:tag primary="true">Git Object</apigee:tag>
@@ -1000,15 +1000,15 @@
 			</method>
 		</resource>
 
-		<resource path="{format}/blob/all/{username}/{reponame}/a47803c9ba26213ff194f042ab686a7749b17476">
+		<resource path="{format}/blob/all/{username}/{reponame}/{tree_sha}">
 			<param name="format" type="xsd:string" style="template" required="true" default="json">
 				<option value="xml" mediaType="application/xml"/>
 				<option value="json" mediaType="application/json"/>
 				<option value="yaml" mediaType="application/yaml"/>
 			</param>
-			<param name="username" required="true" type="xsd:string" style="query" default="schacon"/>
-			<param name="reponame" required="true" type="xsd:string" style="query" default="simplegit"/>
-			<param name="tree_sha" required="true" type="xsd:string" style="query" default="a47803c9ba26213ff194f042ab686a7749b17476"/>
+			<param name="username" required="true" type="xsd:string" style="template" default="schacon"/>
+			<param name="reponame" required="true" type="xsd:string" style="template" default="simplegit"/>
+			<param name="tree_sha" required="true" type="xsd:string" style="template" default="a47803c9ba26213ff194f042ab686a7749b17476"/>
 			<method id="GetBlobs" apigee:displayName="GetBlobs" name="GET">
 				<apigee:tags>
 					<apigee:tag primary="true">Git Object</apigee:tag>
@@ -1021,16 +1021,16 @@
 			</method>
 		</resource>
 
-		<resource path="{format}/tree/full/{username}/{reponame}/365b84e0fd92c47ecdada91da47f2d67500b8e31">
+		<resource path="{format}/tree/full/{username}/{reponame}/{tree_sha}">
 			<param name="format" type="xsd:string" style="template"
 				required="true" default="json">
 				<option value="xml" mediaType="application/xml"/>
 				<option value="json" mediaType="application/json"/>
 				<option value="yaml" mediaType="application/yaml"/>
 			</param>
-			<param name="username" required="true" type="xsd:string" style="query" default="schacon"/>
-			<param name="reponame" required="true" type="xsd:string" style="query" default="simplegit"/>
-			<param name="tree_sha" required="true" type="xsd:string" style="query" default="365b84e0fd92c47ecdada91da47f2d67500b8e31"/>
+			<param name="username" required="true" type="xsd:string" style="template" default="schacon"/>
+			<param name="reponame" required="true" type="xsd:string" style="template" default="simplegit"/>
+			<param name="tree_sha" required="true" type="xsd:string" style="template" default="365b84e0fd92c47ecdada91da47f2d67500b8e31"/>
 			<method id="GetTreeBlobMetadata" apigee:displayName="GetTreeBlobMetadata" name="GET">
 				<apigee:tags>
 					<apigee:tag primary="true">Git Object</apigee:tag>
@@ -1043,15 +1043,15 @@
 			</method>
 		</resource>
 
-		<resource path="{format}/blob/show/{username}/{reponame}/d4fc2d5e810d9b4bc1ce67702603080e3086a4ed">
+		<resource path="{format}/blob/show/{username}/{reponame}/{tree_sha}">
 			<param name="format" type="xsd:string" style="template" required="true" default="json">
 				<option value="xml" mediaType="application/xml"/>
 				<option value="json" mediaType="application/json"/>
 				<option value="yaml" mediaType="application/yaml"/>
 			</param>
-			<param name="username" required="true" type="xsd:string" style="query" default="schacon"/>
-			<param name="reponame" required="true" type="xsd:string" style="query" default="simplegit"/>
-			<param name="tree_sha" required="true" type="xsd:string" style="query" default="d4fc2d5e810d9b4bc1ce67702603080e3086a4ed"/>
+			<param name="username" required="true" type="xsd:string" style="template" default="schacon"/>
+			<param name="reponame" required="true" type="xsd:string" style="template" default="simplegit"/>
+			<param name="tree_sha" required="true" type="xsd:string" style="template" default="d4fc2d5e810d9b4bc1ce67702603080e3086a4ed"/>
 			<method id="GetRawBlob" apigee:displayName="GetRawBlob" name="GET">
 				<apigee:tags>
 					<apigee:tag primary="true">Git Object</apigee:tag>
@@ -1070,10 +1070,10 @@
 				<option value="json" mediaType="application/json"/>
 				<option value="yaml" mediaType="application/yaml"/>
 			</param>
-			<param name="username" required="true" type="xsd:string" style="query" default="schacon" />
-			<param name="reponame" required="true" type="xsd:string" style="query" default="simplegit" />
-			<param name="state" required="true" type="xsd:string" style="query" default="closed" />
-			<param name="searchterm" required="true" type="xsd:string" style="query" default="test" />
+			<param name="username" required="true" type="xsd:string" style="template" default="schacon" />
+			<param name="reponame" required="true" type="xsd:string" style="template" default="simplegit" />
+			<param name="state" required="true" type="xsd:string" style="template" default="closed" />
+			<param name="searchterm" required="true" type="xsd:string" style="template" default="test" />
 			<method id="GetIssues" apigee:displayName="GetIssues" name="GET">
 				<apigee:tags>
 					<apigee:tag primary="true">Issues</apigee:tag>
@@ -1092,9 +1092,9 @@
 				<option value="json" mediaType="application/json"/>
 				<option value="yaml" mediaType="application/yaml"/>
 			</param>
-			<param name="username" required="true" type="xsd:string" style="query" default="schacon"/>
-			<param name="reponame" required="true" type="xsd:string" style="query" default="simplegit"/>
-			<param name="state" required="true" type="xsd:string" style="query" default="closed"/>
+			<param name="username" required="true" type="xsd:string" style="template" default="schacon"/>
+			<param name="reponame" required="true" type="xsd:string" style="template" default="simplegit"/>
+			<param name="state" required="true" type="xsd:string" style="template" default="closed"/>
 			<method id="GetProjectIssues" apigee:displayName="GetProjectIssues" name="GET">
 				<apigee:tags>
 					<apigee:tag primary="true">Issues</apigee:tag>
@@ -1113,9 +1113,9 @@
 				<option value="json" mediaType="application/json"/>
 				<option value="yaml" mediaType="application/yaml"/>
 			</param>
-			<param name="username" required="true" type="xsd:string" style="query" default="schacon"/>
-			<param name="reponame" required="true" type="xsd:string" style="query" default="showoff"/>
-			<param name="num" required="true" type="xsd:int" style="query" default="1"/>
+			<param name="username" required="true" type="xsd:string" style="template" default="schacon"/>
+			<param name="reponame" required="true" type="xsd:string" style="template" default="showoff"/>
+			<param name="num" required="true" type="xsd:int" style="template" default="1"/>
 			<method id="GetIssue" apigee:displayName="GetIssue" name="GET">
 				<apigee:tags>
 					<apigee:tag primary="true">Issues</apigee:tag>
@@ -1134,9 +1134,9 @@
 				<option value="json" mediaType="application/json"/>
 				<option value="yaml" mediaType="application/yaml"/>
 			</param>
-			<param name="username" required="true" type="xsd:string" style="query" default="schacon"/>
-			<param name="reponame" required="true" type="xsd:string" style="query" default="showoff"/>
-			<param name="num" required="true" type="xsd:int" style="query" default="3"/>
+			<param name="username" required="true" type="xsd:string" style="template" default="schacon"/>
+			<param name="reponame" required="true" type="xsd:string" style="template" default="showoff"/>
+			<param name="num" required="true" type="xsd:int" style="template" default="3"/>
 			<method id="GetIssueComments" apigee:displayName="GetIssueComments" name="GET">
 				<apigee:tags>
 					<apigee:tag primary="true">Issues</apigee:tag>
@@ -1155,8 +1155,8 @@
 				<option value="json" mediaType="application/json"/>
 				<option value="yaml" mediaType="application/yaml"/>
 			</param>
-			<param name="username" required="true" type="xsd:string" style="query" default="schacon"/>
-			<param name="reponame" required="true" type="xsd:string" style="query" default="simplegit"/>
+			<param name="username" required="true" type="xsd:string" style="template" default="schacon"/>
+			<param name="reponame" required="true" type="xsd:string" style="template" default="simplegit"/>
 			<method id="OpenIssue" apigee:displayName="OpenIssue" name="POST">
 				<apigee:tags>
 					<apigee:tag primary="true">Issues</apigee:tag>
@@ -1186,9 +1186,9 @@
 				<option value="json" mediaType="application/json"/>
 				<option value="yaml" mediaType="application/yaml"/>
 			</param>
-			<param name="username" required="true" type="xsd:string" style="query" default="schacon"/>
-			<param name="reponame" required="true" type="xsd:string" style="query" default="simplegit"/>
-			<param name="num" required="true" type="xsd:int" style="query" default="3"/>
+			<param name="username" required="true" type="xsd:string" style="template" default="schacon"/>
+			<param name="reponame" required="true" type="xsd:string" style="template" default="simplegit"/>
+			<param name="num" required="true" type="xsd:int" style="template" default="3"/>
 			<method id="CloseIssue" apigee:displayName="CloseIssue" name="DELETE">
 				<apigee:tags>
 					<apigee:tag primary="true">Issues</apigee:tag>
@@ -1207,9 +1207,9 @@
 				<option value="json" mediaType="application/json"/>
 				<option value="yaml" mediaType="application/yaml"/>
 			</param>
-			<param name="username" required="true" type="xsd:string" style="query" default="schacon"/>
-			<param name="reponame" required="true" type="xsd:string" style="query" default="simplegit"/>
-			<param name="num" required="true" type="xsd:int" style="query" default="3" />
+			<param name="username" required="true" type="xsd:string" style="template" default="schacon"/>
+			<param name="reponame" required="true" type="xsd:string" style="template" default="simplegit"/>
+			<param name="num" required="true" type="xsd:int" style="template" default="3" />
 			<method id="ReOpenIssue" apigee:displayName="ReOpenIssue" name="POST">
 				<apigee:tags>
 					<apigee:tag primary="true">Issues</apigee:tag>
@@ -1228,9 +1228,9 @@
 				<option value="json" mediaType="application/json"/>
 				<option value="yaml" mediaType="application/yaml"/>
 			</param>
-			<param name="username" required="true" type="xsd:string" style="query" default="schacon"/>
-			<param name="reponame" required="true" type="xsd:string" style="query" default="simplegit"/>
-			<param name="num" required="true" type="xsd:int" style="query" default="3"/>
+			<param name="username" required="true" type="xsd:string" style="template" default="schacon"/>
+			<param name="reponame" required="true" type="xsd:string" style="template" default="simplegit"/>
+			<param name="num" required="true" type="xsd:int" style="template" default="3"/>
 			<method id="UpdateIssue" apigee:displayName="UpdateIssue" name="POST">
 				<apigee:tags>
 					<apigee:tag primary="true">Issues</apigee:tag>
@@ -1260,8 +1260,8 @@
 				<option value="json" mediaType="application/json"/>
 				<option value="yaml" mediaType="application/yaml"/>
 			</param>
-			<param name="username" required="true" type="xsd:string" style="query" default="schacon"/>
-			<param name="reponame" required="true" type="xsd:string" style="query" default="showoff"/>
+			<param name="username" required="true" type="xsd:string" style="template" default="schacon"/>
+			<param name="reponame" required="true" type="xsd:string" style="template" default="showoff"/>
 			<method id="GetLabels" apigee:displayName="GetLabels" name="GET">
 				<apigee:tags>
 					<apigee:tag primary="true">Issues</apigee:tag>
@@ -1280,10 +1280,10 @@
 				<option value="json" mediaType="application/json"/>
 				<option value="yaml" mediaType="application/yaml"/>
 			</param>
-			<param name="username" required="true" type="xsd:string" style="query" default="schacon"/>
-			<param name="reponame" required="true" type="xsd:string" style="query" default="simplegit"/>
-			<param name="labelname" required="true" type="xsd:string" style="query" default="testing"/>
-			<param name="num" required="true" type="xsd:int" style="query" default="1"/>
+			<param name="username" required="true" type="xsd:string" style="template" default="schacon"/>
+			<param name="reponame" required="true" type="xsd:string" style="template" default="simplegit"/>
+			<param name="labelname" required="true" type="xsd:string" style="template" default="testing"/>
+			<param name="num" required="true" type="xsd:int" style="template" default="1"/>
 			<method id="AddLabel" apigee:displayName="AddLabel" name="POST">
 				<apigee:tags>
 					<apigee:tag primary="true">Issues</apigee:tag>
@@ -1302,10 +1302,10 @@
 				<option value="json" mediaType="application/json"/>
 				<option value="yaml" mediaType="application/yaml"/>
 			</param>
-			<param name="username" required="true" type="xsd:string" style="query" default="schacon"/>
-			<param name="reponame" required="true" type="xsd:string" style="query" default="simplegit"/>
-			<param name="labelname" required="true" type="xsd:string" style="query" default="testing"/>
-			<param name="num" required="true" type="xsd:int" style="query" default="1"/>
+			<param name="username" required="true" type="xsd:string" style="template" default="schacon"/>
+			<param name="reponame" required="true" type="xsd:string" style="template" default="simplegit"/>
+			<param name="labelname" required="true" type="xsd:string" style="template" default="testing"/>
+			<param name="num" required="true" type="xsd:int" style="template" default="1"/>
 			<method id="DeleteLabel" apigee:displayName="DeleteLabel" name="DELETE">
 				<apigee:tags>
 					<apigee:tag primary="true">Issues</apigee:tag>
@@ -1324,9 +1324,9 @@
 				<option value="json" mediaType="application/json"/>
 				<option value="yaml" mediaType="application/yaml"/>
 			</param>
-			<param name="username" required="true" type="xsd:string" style="query" default="schacon"/>
-			<param name="reponame" required="true" type="xsd:string" style="query" default="simplegit"/>
-			<param name="id" required="true" type="xsd:int" style="query" default="1"/>
+			<param name="username" required="true" type="xsd:string" style="template" default="schacon"/>
+			<param name="reponame" required="true" type="xsd:string" style="template" default="simplegit"/>
+			<param name="id" required="true" type="xsd:int" style="template" default="1"/>
 			<method id="AddComment" apigee:displayName="AddComment" name="POST">
 				<apigee:tags>
 					<apigee:tag primary="true">Issues</apigee:tag>

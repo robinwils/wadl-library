@@ -9,7 +9,7 @@
 	<resources base="https://sites.google.com/feeds/">
 		
 		<resource path="site/{domainName}">
-			<method id="site.list" name="GET" apigee:displayName="Get Sites">
+			<method id="list" name="GET" apigee:displayName="Get Sites">
 				<apigee:tags>
 					<apigee:tag primary="true">Google Sites</apigee:tag>
 				</apigee:tags>
@@ -29,7 +29,7 @@
 		</resource>
 
 		<resource path="activity/{domainName}/{siteName}">
-			<method id="activity.list" name="GET" apigee:displayName="Get Site Activities">
+			<method id="activity" name="GET" apigee:displayName="Get Site Activities">
 				<apigee:tags>
 					<apigee:tag primary="true">Google Sites</apigee:tag>
 				</apigee:tags>

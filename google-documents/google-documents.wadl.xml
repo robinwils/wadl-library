@@ -9,7 +9,7 @@
 	<resources base="https://docs.google.com/feeds/default">
 		
 		<resource path="{visibility}/full">
-			<method id="documents.list.feeds" name="GET" apigee:displayName="Get Documents and Files">
+			<method id="list" name="GET" apigee:displayName="Get Documents and Files">
 				<apigee:tags>
 					<apigee:tag primary="true">Google Documents</apigee:tag>
 				</apigee:tags>
@@ -34,7 +34,7 @@
 		</resource>
 		
 		<resource path="{visibility}/full/{resourceID}">
-			<method id="documents.list.feed" name="GET" apigee:displayName="Get Document">
+			<method id="get" name="GET" apigee:displayName="Get Document">
 				<apigee:tags>
 					<apigee:tag primary="true">Google Documents</apigee:tag>
 				</apigee:tags>

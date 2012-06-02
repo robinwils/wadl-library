@@ -9,7 +9,7 @@
 	<resources base="https://www.googleapis.com/books/v1">
 		
 		<resource path="users/{userId}/bookshelves">
-			<method id="books.bookshelves.list" name="GET" apigee:displayName="List Bookshelves">
+			<method id="list" name="GET" apigee:displayName="List Bookshelves">
 				<apigee:tags>
 					<apigee:tag primary="true">Google Books</apigee:tag>
 				</apigee:tags>
@@ -32,7 +32,7 @@
 		</resource>
 		
 		<resource path="users/{userId}/bookshelves/{shelf}">
-			<method id="books.bookshelves.get" name="GET" apigee:displayName="Get Bookshelf">
+			<method id="get" name="GET" apigee:displayName="Get Bookshelf">
 				<apigee:tags>
 					<apigee:tag primary="true">Google Books</apigee:tag>
 				</apigee:tags>

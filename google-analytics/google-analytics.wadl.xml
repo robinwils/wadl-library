@@ -9,7 +9,7 @@
 	<resources base="https://www.googleapis.com/analytics/v3">
 		
 		<resource path="management/accounts">
-			<method id="analytics.management.accounts.list" name="GET" apigee:displayName="Get Accounts">
+			<method id="listAccounts" name="GET" apigee:displayName="Get Accounts">
 				<apigee:tags>
 					<apigee:tag primary="true">Google Analytics</apigee:tag>
 				</apigee:tags>
@@ -31,7 +31,7 @@
 		</resource>
 		
 		<resource path="management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}/goals">
-			<method id="analytics.management.goals.list" name="GET" apigee:displayName="Get Goals">
+			<method id="listGoals" name="GET" apigee:displayName="Get Goals">
 				<apigee:tags>
 					<apigee:tag primary="true">Google Analytics</apigee:tag>
 				</apigee:tags>

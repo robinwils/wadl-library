@@ -9,7 +9,7 @@
 	<resources base="https://www.googleapis.com/prediction/v1.4">
 		
 		<resource path="hostedmodels/{hostedModelName}/predict">
-			<method id="prediction.hostedmodels.predict" name="POST" apigee:displayName="Predict Against Hosted Model">
+			<method id="hosted" name="POST" apigee:displayName="Predict Against Hosted Model">
 				<apigee:tags>
 					<apigee:tag primary="true">Google Prediction</apigee:tag>
 				</apigee:tags>
@@ -42,7 +42,7 @@
 		</resource>
 
 		<resource path="trainedmodels/{id}/predict">
-			<method id="prediction.trainedmodels.predict" name="POST" apigee:displayName="Predict Against Trained Model">
+			<method id="trained" name="POST" apigee:displayName="Predict Against Trained Model">
 				<apigee:tags>
 					<apigee:tag primary="true">Google Prediction</apigee:tag>
 				</apigee:tags>

@@ -9,7 +9,7 @@
 	<resources base="https://spreadsheets.google.com/feeds">
 		
 		<resource path="spreadsheets/private/full">
-			<method id="spreadsheets.list" name="GET" apigee:displayName="Get Spreadsheets">
+			<method id="list" name="GET" apigee:displayName="Get Spreadsheets">
 				<apigee:tags>
 					<apigee:tag primary="true">Google Spreadsheets</apigee:tag>
 				</apigee:tags>
@@ -25,7 +25,7 @@
 		</resource>
 		
 		<resource path="worksheets/{key}/private/full">			
-			<method id="spreadsheets.create" name="GET" apigee:displayName="Get Worksheet">
+			<method id="get" name="GET" apigee:displayName="Get Worksheet">
 				<apigee:tags>
 					<apigee:tag primary="true">Google Spreadsheets</apigee:tag>
 				</apigee:tags>

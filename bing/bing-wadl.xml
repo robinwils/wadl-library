@@ -3,7 +3,7 @@
              xmlns:apigee="http://api.apigee.com/wadl/2010/07/" xmlns="http://wadl.dev.java.net/2009/02"
              xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://apigee.com/schemas/wadl-schema.xsd    http://api.apigee.com/wadl/2010/07/ http://apigee.com/schemas/apigee-wadl-extensions.xsd">
     <resources base="http://api.search.live.net">
-        <resource path="/{format}.aspx?sources=web%26query={query}">
+        <resource path="/{format}.aspx">
             <param name="query" required="true" type="xsd:string" style="query" default="sushi"/>
             <param name="sources" required="true" type="xsd:string" style="query" default="web"/>
             <param name="format" required="true" type="xsd:string" style="template" default="json"/>
@@ -20,7 +20,7 @@
             </method>
         </resource>
   
-        <resource path="/{format}.aspx?sources=image%26query={query}">
+        <resource path="/{format}.aspx">
             <param name="query" required="true" type="xsd:string" style="query" default="sushi"/>
             <param name="sources" required="true" type="xsd:string" style="query" default="image"/>
             <param name="format" required="true" type="xsd:string" style="template" default="json"/>
@@ -37,7 +37,7 @@
             </method>
         </resource>
        
-        <resource path="/{format}.aspx?sources=news%26query={query}">
+        <resource path="/{format}.aspx">
             <param name="query" required="true" type="xsd:string" style="query" default="sushi"/>
             <param name="sources" required="true" type="xsd:string" style="query" default="news"/>
             <param name="format" required="true" type="xsd:string" style="template" default="json"/>
@@ -54,7 +54,7 @@
             </method>
         </resource>
        
-        <resource path="/{format}.aspx?sources=instantanswer%26query={query}">
+        <resource path="/{format}.aspx">
             <param name="query" required="true" type="xsd:string" style="query" default="sushi"/>
             <param name="sources" required="true" type="xsd:string" style="query" default="instantanswer"/>
             <param name="format" required="true" type="xsd:string" style="template" default="json"/>
@@ -71,7 +71,7 @@
             </method>
         </resource>
         
-        <resource path="/{format}.aspx?sources=spell%26query={query}">
+        <resource path="/{format}.aspx">
             <param name="query" required="true" type="xsd:string" style="query" default="sushi"/>
             <param name="sources" required="true" type="xsd:string" style="query" default="spell"/>
             <param name="format" required="true" type="xsd:string" style="template" default="json"/>
@@ -88,7 +88,7 @@
             </method>
         </resource>
         
-        <resource path="/{format}.aspx?sources=phonebook%26query={query}"> 
+        <resource path="/{format}.aspx"> 
             <param name="query" required="true" type="xsd:string" style="query" default="sushi"/>
             <param name="sources" required="true" type="xsd:string" style="query" default="phonebook"/>
             <param name="format" required="true" type="xsd:string" style="template" default="json"/>
@@ -105,7 +105,7 @@
             </method>
         </resource>
  
-        <resource path="/{format}.aspx?sources=relatedsearch%26query={query}">
+        <resource path="/{format}.aspx">
             <param name="query" required="true" type="xsd:string" style="query" default="sushi"/>
             <param name="sources" required="true" type="xsd:string" style="query" default="relatedsearch"/>
             <param name="format" required="true" type="xsd:string" style="template" default="json"/>
@@ -122,7 +122,7 @@
             </method>
         </resource>
 
-        <resource path="/{format}.aspx?sources=ad%26query={query}">	
+        <resource path="/{format}.aspx">	
             <param name="query" required="true" type="xsd:string" style="query" default="sushi"/>
             <param name="sources" required="true" type="xsd:string" style="query" default="ad"/>
             <param name="format" required="true" type="xsd:string" style="template" default="json"/>
@@ -139,7 +139,7 @@
             </method>
         </resource>
 
-        <resource path="/{format}.aspx?sources=web+image%26query={query}">
+        <resource path="/{format}.aspx">
             <param name="query" required="true" type="xsd:string" style="query" default="sushi"/>
             <param name="sources" required="true" type="xsd:string" style="query" default="web+images"/>
             <param name="format" required="true" type="xsd:string" style="template" default="json"/>

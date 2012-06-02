@@ -9,7 +9,7 @@
 	<resources base="https://apps-apis.google.com/a/feeds/emailsettings/2.0">
 
 		<resource path="{domain_name}/{user_name}/label">
-			<method id="gmail.settings.label.retrieve" name="GET" apigee:displayName="Get Labels">
+			<method id="getLabels" name="GET" apigee:displayName="Get Labels">
 				<apigee:tags>
 					<apigee:tag primary="true">Google Mail (Settings)</apigee:tag>
 				</apigee:tags>
@@ -30,7 +30,7 @@
 		</resource>
 
 		<resource path="{domain name}/{user name}/pop">
-			<method id="gmail.settings.pop.retrieve" name="GET" apigee:displayName="Get POP Settings">
+			<method id="getPopSettings" name="GET" apigee:displayName="Get POP Settings">
 				<apigee:tags>
 					<apigee:tag primary="true">Google Mail (Settings)</apigee:tag>
 				</apigee:tags>

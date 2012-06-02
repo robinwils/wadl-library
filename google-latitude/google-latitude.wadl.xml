@@ -9,7 +9,7 @@
 	<resources base="https://www.googleapis.com/latitude/v1">
 		
 		<resource path="location">
-			<method id="location.list" name="GET" apigee:displayName="List Locations">
+			<method id="list" name="GET" apigee:displayName="List Locations">
 				<apigee:tags>
 					<apigee:tag primary="true">Google Latitude</apigee:tag>
 				</apigee:tags>
@@ -33,7 +33,7 @@
 		</resource>
 		
 		<resource path="location/{locationId}">
-			<method id="location.get" name="GET" apigee:displayName="Get Location">
+			<method id="get" name="GET" apigee:displayName="Get Location">
 				<apigee:tags>
 					<apigee:tag primary="true">Google Latitude</apigee:tag>
 				</apigee:tags>

@@ -9,7 +9,7 @@
 	<resources base="https://www-opensocial.googleusercontent.com/api">
 		
 		<resource path="people/@me/@self">
-			<method id="contacts.user.info" name="GET" apigee:displayName="Get User Contact Information">
+			<method id="me" name="GET" apigee:displayName="Get User Contact Information">
 				<apigee:tags>
 					<apigee:tag primary="true">Google Contacts</apigee:tag>
 				</apigee:tags>
@@ -25,7 +25,7 @@
 		</resource>
 
 		<resource path="people/@me/@all">
-			<method id="contacts.user.contacts" name="GET" apigee:displayName="Get User Contacts">
+			<method id="list" name="GET" apigee:displayName="Get User Contacts">
 				<apigee:tags>
 					<apigee:tag primary="true">Google Contacts</apigee:tag>
 				</apigee:tags>

@@ -2603,6 +2603,7 @@
                      apigee:url="https://dev.twitter.com/docs/using-search"><![CDATA[Returns tweets that match a specified query.
                 ]]></doc>
                 <request>
+                    <param name="q" required="true" type="string" style="query" default=""/>
                     <param name="callback" required="false" type="string" style="query" default=""/>
                     <param name="geocode" required="false" type="string" style="query" default=""/>
                     <param name="lang" required="false" type="string" style="query" default=""/>

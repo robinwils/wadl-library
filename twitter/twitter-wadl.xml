@@ -2592,18 +2592,18 @@
                 <option value="rss" mediaType="application/rss+xml"/>
                 <option value="atom" mediaType="application/atom+xml"/>
             </param>
+            <param name="q" required="true" type="string" style="query" default=""/>
             <method id="search" name="GET">
                 <apigee:tags xmlns:apigee="http://api.apigee.com/wadl/2010/07/">
                     <apigee:tag primary="true">Search</apigee:tag>
                 </apigee:tags>
-                <apigee:authentication xmlns:apigee="http://api.apigee.com/wadl/2010/07/" required="true"/>
+                <apigee:authentication xmlns:apigee="http://api.apigee.com/wadl/2010/07/" required="false"/>
                 <apigee:example xmlns:apigee="http://api.apigee.com/wadl/2010/07/"
                                 url="/search.{format}?q={q}"/>
                 <doc xmlns:apigee="http://api.apigee.com/wadl/2010/07/" title=""
                      apigee:url="https://dev.twitter.com/docs/using-search"><![CDATA[Returns tweets that match a specified query.
                 ]]></doc>
                 <request>
-                    <param name="q" required="true" type="string" style="query" default=""/>
                     <param name="callback" required="false" type="string" style="query" default=""/>
                     <param name="geocode" required="false" type="string" style="query" default=""/>
                     <param name="lang" required="false" type="string" style="query" default=""/>

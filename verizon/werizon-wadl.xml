@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:apigee="http://api.apigee.com/wadl/2010/07/" xmlns="http://wadl.dev.java.net/2009/02"
+	xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://apigee.com/schemas/wadl-schema.xsd    http://api.apigee.com/wadl/2010/07/ http://apigee.com/schemas/apigee-wadl-extensions.xsd">
+
+	<resources base="https://sim.verizoncert.com">
+
+		<resource path="rest/sms/messages">
+			<param name="addresses" type="xsd:anyURI" style="query" required="true">
+				<doc>Addresses to which the SMS will be sent.</doc>
+			</param>
+			<param name="senderName" type="xsd:string" style="query" required="false">
+				<doc>If present, it indicates the SMS sender name, i.e. the string that is displayed on the user's terminal as the originator of the message</doc>
+			</param>
+			<param name="message" type="xsd:string" style="query" required="false">
+				<doc>Text to be sent in SMS</doc>
+			</param>
+			<param name="charging" type="object" style="query" required="false">
+				<doc>Specifies the charging information</doc>
+			</param>
+			<param name="charging" type="object" style="query" required="false">
+				<doc>It defines the application endpoint, interfaceName and correlator that will be used to notify the application when the message has been delivered to terminal or if delivery is impossible.</doc>
+			</param>
+			<method id="sendSms" name="POST">
+				<apigee:tags>
+					<apigee:tag primary="true">SMS</apigee:tag>
+				</apigee:tags>
+				<apigee:authentication required="true" />
+				<doc title=""
+					apigee:url="https://prod.verizonapp.com/rest/sms/index.html#Send Sms">
+					This interface defines operations to send various types of Short Messages and to subsequently poll for delivery status
+				</doc>
+				<request>
+					<representation mediaType="application/json" />
+				</request>
+			</method>
+		</resource>
+
+		<resource path="rest/sms/receive-messages/{registrationIdentifier}">
+			<param name="registrationIdentifier" type="xsd:string" style="template" required="true">
+				<doc>Identifies the off-line provisioning step that enables the application to receive notification of SMS reception according to specified criteria</doc>
+			</param>
+
+			<method id="receiveSms" name="POST">
+				<apigee:tags>
+					<apigee:tag primary="true">SMS</apigee:tag>
+				</apigee:tags>
+				<apigee:authentication required="true" />
+				<doc title=""
+					apigee:url="https://prod.verizonapp.com/rest/sms/index.html#Get Received Sms">
+                      The invocation of getReceivedSms retrieves all the SMS messages received that fulfil the criteria identified by registrationIdentifier. The method returns only the list of SMS messages received since the previous invocation of the same method, i.e. each time the method is executed the messages returned are removed from the server. Moreover, each SMS message will be automatically removed from the server after a maximum time interval specified in an off-line configuration step.
+                </doc>
+			</method>
+		</resource>
+
+		<resource path="rest/sms/delivery-status/{registrationIdentifier}">
+			<param name="registrationIdentifier" type="xsd:string" style="template" required="true">
+				<doc>It identifies a specific SMS delivery request</doc>
+			</param>
+
+			<method id="getSmsDeliveryStatus" name="POST">
+				<apigee:tags>
+					<apigee:tag primary="true">SMS</apigee:tag>
+				</apigee:tags>
+				<apigee:authentication required="true" />
+				<doc title=""
+					apigee:url="https://prod.verizonapp.com/rest/sms/index.html#Get Sms Delivery Status"><![CDATA[
+The application invokes the getSmsDeliveryStatus operation to request the status of a previous SMS delivery request identified by requestIdentifier. The information on the status is returned in deliveryStatus, which is an array of status related to the request identified by requestIdentifier. The status is identified by a couplet indicating a user address and the associated delivery status. This method can be invoked multiple times by the application even if the status has reached a final value. However, after the status has reached a final value, status information will be available only for a limited period of time that should be specified in an off-line configuration step. The following five different SMS delivery status values have been identified:
+
+- 'DeliveredToNetwork': in case of concatenated messages, only when all the SMS-parts have been successfully delivered to the network.
+- 'DeliveryUncertain': e.g. because it was handed off to another network.
+- 'DeliveryImpossible': unsuccessful delivery; the message could not be delivered before it expired.
+- 'MessageWaiting': the message is still queued for delivery.
+- 'DeliveredToTerminal': in case of concatenated messages, only when all the SMS-parts have been successfully delivered to the terminal.
+]]>
+                </doc>
+			</method>
+		</resource>
+	</resources>
+
+</application>

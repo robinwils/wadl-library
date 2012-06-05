@@ -2592,11 +2592,12 @@
                 <option value="rss" mediaType="application/rss+xml"/>
                 <option value="atom" mediaType="application/atom+xml"/>
             </param>
+            <param name="q" required="true" type="string" style="query" default=""/>
             <method id="search" name="GET">
                 <apigee:tags xmlns:apigee="http://api.apigee.com/wadl/2010/07/">
                     <apigee:tag primary="true">Search</apigee:tag>
                 </apigee:tags>
-                <apigee:authentication xmlns:apigee="http://api.apigee.com/wadl/2010/07/" required="true"/>
+                <apigee:authentication xmlns:apigee="http://api.apigee.com/wadl/2010/07/" required="false"/>
                 <apigee:example xmlns:apigee="http://api.apigee.com/wadl/2010/07/"
                                 url="/search.{format}?q={q}"/>
                 <doc xmlns:apigee="http://api.apigee.com/wadl/2010/07/" title=""

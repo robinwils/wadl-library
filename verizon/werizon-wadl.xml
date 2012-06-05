@@ -18,7 +18,7 @@
 			<param name="charging" type="object" style="query" required="false">
 				<doc>Specifies the charging information</doc>
 			</param>
-			<param name="charging" type="object" style="query" required="false">
+			<param name="receiptRequest" type="object" style="query" required="false">
 				<doc>It defines the application endpoint, interfaceName and correlator that will be used to notify the application when the message has been delivered to terminal or if delivery is impossible.</doc>
 			</param>
 			<method id="sendSms" name="POST">

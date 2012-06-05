@@ -340,7 +340,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Venue</apigee:tag>
 				</apigee:tags>
-				<apigee:authentication required="false" />
+				<apigee:authentication required="true" />
 				<apigee:example url="/venues/{VENUE_ID}" />
 				<doc title=""
 					apigee:url="http://developer.foursquare.com/docs/venues/venues.html"><![CDATA[
@@ -408,7 +408,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Venue</apigee:tag>
 				</apigee:tags>
-				<apigee:authentication required="false" />
+				<apigee:authentication required="true" />
 				<apigee:example url="/venues/categories" />
 				<doc title=""
 					apigee:url="http://developer.foursquare.com/docs/venues/categories.html"><![CDATA[
@@ -442,7 +442,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Venue</apigee:tag>
 				</apigee:tags>
-				<apigee:authentication required="false" />
+				<apigee:authentication required="true" />
 				<apigee:example url="/venues/search?ll={lat},{long}" />
 				<doc title=""
 					apigee:url="http://developer.foursquare.com/docs/venues/search.html"><![CDATA[
@@ -462,7 +462,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Venue</apigee:tag>
 				</apigee:tags>
-				<apigee:authentication required="false" />
+				<apigee:authentication required="true" />
 				<apigee:example url="/venues/{VENUE_ID}/herenow" />
 				<doc title=""
 					apigee:url="http://developer.foursquare.com/docs/venues/herenow.html"><![CDATA[
@@ -483,7 +483,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Venue</apigee:tag>
 				</apigee:tags>
-				<apigee:authentication required="false" />
+				<apigee:authentication required="true" />
 				<apigee:example url="/venues/{VENUE_ID}/tips" />
 				<doc title=""
 					apigee:url="http://developer.foursquare.com/docs/venues/tips.html"><![CDATA[
@@ -512,7 +512,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Venue</apigee:tag>
 				</apigee:tags>
-				<apigee:authentication required="false" />
+				<apigee:authentication required="true" />
 				<apigee:example url="/venues/{VENUE_ID}/photos?group={group}" />
 				<doc title=""
 					apigee:url="http://developer.foursquare.com/docs/venues/photos.html"><![CDATA[
@@ -620,7 +620,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Tip</apigee:tag>
 				</apigee:tags>
-				<apigee:authentication required="false" />
+				<apigee:authentication required="true" />
 				<apigee:example url="/tips/{TIP_ID}" />
 				<doc title=""
 					apigee:url="http://developer.foursquare.com/docs/tips/tips.html"><![CDATA[
@@ -672,7 +672,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Tip</apigee:tag>
 				</apigee:tags>
-				<apigee:authentication required="false" />
+				<apigee:authentication required="true" />
 				<apigee:example url="/tips/search?ll={lat},{long}" />
 				<doc title=""
 					apigee:url="http://developer.foursquare.com/docs/tips/search.html"><![CDATA[
@@ -936,7 +936,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Special</apigee:tag>
 				</apigee:tags>
-				<apigee:authentication required="false" />
+				<apigee:authentication required="true" />
 				<apigee:example url="/specials/{SPECIAL_ID}" />
 				<doc title=""
 					apigee:url="http://developer.foursquare.com/docs/specials/specials.html"><![CDATA[

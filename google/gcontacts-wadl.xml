@@ -26,6 +26,9 @@ Retrieving all contacts of a user.
 
 /!\ Note: The special userEmail value default can be used to refer to the authenticated user. /!\
                 ]]></doc>
+               	<response>
+               		<representation mediaType="text/xml" />
+               	</response>
 			</method>
 
 			<method id="getContacts" name="GET">
@@ -54,6 +57,9 @@ Retrieving all contacts of a user.
 						<doc>The lower bound on entry update dates.</doc>
 					</param>
                	</request>
+               	<response>
+               		<representation mediaType="text/xml" />
+               	</response>
 			</method>
 		</resource>
 
@@ -75,6 +81,9 @@ Retrieving a single contact.
 
 /!\ Note: The special userEmail value default can be used to refer to the authenticated user. /!\
                 ]]></doc>
+               	<response>
+               		<representation mediaType="text/xml" />
+               	</response>
 			</method>
 		</resource>
 
@@ -96,6 +105,9 @@ Retrieving a contact's photo.
 
 /!\ Note: The special userEmail value default can be used to refer to the authenticated user. /!\
                 ]]></doc>
+               	<response>
+               		<representation mediaType="text/xml" />
+               	</response>
 			</method>
 		</resource>
 
@@ -114,6 +126,9 @@ Retrieving all contact groups.
 
 /!\ Note: The special userEmail value default can be used to refer to the authenticated user. /!\
                 ]]></doc>
+               	<response>
+               		<representation mediaType="text/xml" />
+               	</response>
 			</method>
 		</resource>
 
@@ -149,6 +164,9 @@ Retrieving contact groups using query parameters
 						<doc>The lower bound on entry update dates.</doc>
 					</param>
                	</request>
+               	<response>
+               		<representation mediaType="text/xml" />
+               	</response>
 			</method>
 		</resource>
 
@@ -170,6 +188,9 @@ Retrieving a single contact group
 
 /!\ Note: The special userEmail value default can be used to refer to the authenticated user. /!\
                 ]]></doc>
+               	<response>
+               		<representation mediaType="text/xml" />
+               	</response>
 			</method>
 		</resource>
 	</resources>

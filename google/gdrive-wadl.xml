@@ -21,14 +21,14 @@
 Gets a file's metadata by ID. To download a file's content, send an authorized HTTP GET request to the file's downloadUrl.
                 ]]></doc>
                 <request>
-                	<param name="projection" type="xsd:string" required="false">
+                	<param name="projection" type="xsd:string" style="query" required="false">
                 		<doc><![CDATA[Restrict information returned for simplicity and optimization. 
 
 Acceptable values are:
 "BASIC" - Includes only the basic metadata fields (as of Drive API v1, this includes all fields).
 "FULL" - Includes all metadata fields.]]></doc>
 					</param>
-					<param name="updateViewedDate" type="xsd:boolean" required="false">
+					<param name="updateViewedDate" type="xsd:boolean" style="query" required="false">
 						<doc><![CDATA[
 Whether to update the view date after successfully retrieving the file. Default value is false.
 

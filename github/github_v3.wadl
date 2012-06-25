@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:apigee="http://api.apigee.com/wadl/2010/07/"
+	xmlns="http://wadl.dev.java.net/2009/02" xmlns:t="urn:github:githubresponse"
+	xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://apigee.com/schemas/wadl-schema.xsd http://api.apigee.com/wadl/2010/07/ http://apigee.com/schemas/apigee-wadl-extensions.xsd http://webshell.io/wadl/2012/06/ http://webshell.io/wadl/webshell-extensions.xsd">
+
+	<resources base="https://api.github.com">
+
+		<resource path="users/{user}/gists">
+			<param name="user" required="true" type="xsd:string" style="template">
+				<doc>Name of the user</doc>
+			</param>
+			<method id="gistListUser" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Gist</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/gists/">
+					List a user’s gists
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="gists">
+			<method id="gistList" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Gist</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="true"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/gists/">
+					List the authenticated user’s gists
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="gists/public">
+			<method id="gistListPublic" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Gist</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/gists/">
+					List all public gists
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="gists/starred">
+			<method id="gistListStarred" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Gist</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc apigee:url="http://developer.github.com/v3/gists/">
+					List the authenticated user’s starred gists
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="gists/{id}">
+			<param name="id" required="true" type="xsd:string" style="template">
+				<doc>Gist id</doc>
+			</param>
+			<method id="gistGet" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Gist</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/gists/">
+					Get a single gist
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="gists">
+			<param name="description" required="false" type="xsd:string" style="query">
+				<doc>The description for this gist</doc>
+			</param>
+			<param name="public" required="true" type="xsd:boolean" style="query">
+				<doc>Set if this gist is public or not</doc>
+			</param>
+			<param name="files" required="true" type="xsd:object" style="query">
+				<doc>Files that make up this gist. The key of which should be a required string filename and the value another required hash with parameter content.</doc>
+			</param>
+			<method id="gistCreate" name="POST">
+				<apigee:tags>
+					<apigee:tag primary="true">Gist</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/gists/">
+					Create a gist
+				</doc>
+				<request>
+					<representation mediaType="application/json"/>
+				</request>
+			</method>
+		</resource>
+
+		<resource path="gists/{id}/comments">
+			<param name="id" required="true" type="xsd:string" style="template">
+				<doc>Gist id</doc>
+			</param>
+			<method id="gistGetComments" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Gist</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/gists/">
+					Get a single gist
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="repos/{user}/{repo}/git/blobs/{sha}">
+			<param name="user" required="true" type="xsd:string" style="template">
+				<doc>Name of the user</doc>
+			</param>
+			<param name="repo" required="true" type="xsd:string" style="template">
+				<doc>Name of the repositoy</doc>
+			</param>
+			<param name="sha" required="true" type="xsd:string" style="template">
+				<doc>Blob SHA</doc>
+			</param>
+			<method id="getBlob" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Blobs</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/git/blobs/">
+					Get a Blob
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="repos/{user}/{repo}/git/blobs">
+			<param name="user" required="true" type="xsd:string" style="template">
+				<doc>Name of the user</doc>
+			</param>
+			<param name="repo" required="true" type="xsd:string" style="template">
+				<doc>Name of the repositoy</doc>
+			</param>
+			<method id="createBlob" name="POST">
+				<apigee:tags>
+					<apigee:tag primary="true">Blobs</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/git/blobs/">
+					Create a Blob
+				</doc>
+				<request>
+					<param name="content" required="true" type="xsd:string" style="query">
+						<doc>Content of the blob</doc>
+					</param>
+					<param name="encoding" required="true" type="xsd:string" style="query" default="utf-8">
+						<doc>Encoding of content, can be 'utf-8' or 'base64'</doc>
+					</param>
+					<representation mediaType="application/json"/>
+				</request>
+			</method>
+		</resource>
+
+		<resource path="repos/{user}/{repo}/commits/{sha}">
+			<param name="user" required="true" type="xsd:string" style="template">
+				<doc>Name of the user</doc>
+			</param>
+			<param name="repo" required="true" type="xsd:string" style="template">
+				<doc>Name of the repositoy</doc>
+			</param>
+			<param name="sha" required="true" type="xsd:string" style="template">
+				<doc>Commit SHA</doc>
+			</param>
+			<method id="getCommit" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Commits</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/git/commits/">
+					Get a Commit
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="repos/{user}/{repo}/git/commits">
+			<param name="user" required="true" type="xsd:string" style="template">
+				<doc>Name of the user</doc>
+			</param>
+			<param name="repo" required="true" type="xsd:string" style="template">
+				<doc>Name of the repositoy</doc>
+			</param>
+			<method id="createBlob" name="POST">
+				<apigee:tags>
+					<apigee:tag primary="true">Commits</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/git/commits/">
+					Create a Commit
+				</doc>
+				<request>
+					<param name="message" required="true" type="xsd:string" style="query">
+						<doc>Commit message</doc>
+					</param>
+					<param name="tree" required="true" type="xsd:string" style="query">
+						<doc>SHA of the tree object this commit points to</doc>
+					</param>
+					<param name="parents" required="false" type="xsd:array" style="query">
+						<doc>SHAs of the commits that were the parents of this commit. If omitted or empty, the commit will be written as a root commit. For a single parent, an array of one SHA should be provided, for a merge commit, an array of more than one should be provided.</doc>
+					</param>
+					<param name="author.name" required="false" type="xsd:string" style="query">
+						<doc>Name of the author of the commit</doc>
+					</param>
+					<param name="author.email" required="false" type="xsd:string" style="query">
+						<doc>Email of the author of the commit</doc>
+					</param>
+					<param name="author.date" required="false" type="xsd:dateTime" style="query">
+						<doc>When this commit was authored</doc>
+					</param>
+					<param name="committer.name" required="false" type="xsd:string" style="query">
+						<doc>Name of the committer of the commit</doc>
+					</param>
+					<param name="committer.email" required="false" type="xsd:string" style="query">
+						<doc>Email of the committer of the commit</doc>
+					</param>
+					<param name="committer.date" required="false" type="xsd:dateTime" style="query">
+						<doc>When this commit was committed</doc>
+					</param>
+					<representation mediaType="application/json"/>
+				</request>
+			</method>
+		</resource>
+
+		<resource path="repos/{user}/{repo}/git/refs/{ref}">
+			<param name="user" required="true" type="xsd:string" style="template">
+				<doc>Name of the user</doc>
+			</param>
+			<param name="repo" required="true" type="xsd:string" style="template">
+				<doc>Name of the repositoy</doc>
+			</param>
+			<method id="getReference" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">References</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/git/refs/">
+					Get a Reference
+				</doc>
+				<request>
+					<param name="ref" required="true" type="xsd:string" style="template">
+						<doc>Must be formatted as `heads/branch`, not just `branch`</doc>
+					</param>
+				</request>
+			</method>
+			<method id="getSubReference" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">References</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/git/refs/">
+					Get a Reference
+				</doc>
+				<request>
+					<param name="ref" required="true" type="xsd:string" style="template">
+						<doc>Sub-namespace, e.g. `heads` or `tags`</doc>
+					</param>
+				</request>
+			</method>
+		</resource>
+
+		<resource path="repos/{user}/{repo}/git/refs">
+			<param name="user" required="true" type="xsd:string" style="template">
+				<doc>Name of the user</doc>
+			</param>
+			<param name="repo" required="true" type="xsd:string" style="template">
+				<doc>Name of the repositoy</doc>
+			</param>
+			<method id="getReference" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">References</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/git/refs/">
+					Get all References.
+					This will return an array of all the references on the system, including things like notes and stashes if they exist on the server. Anything in the namespace, not just heads and tags, though that would be the most common.
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="repos/{user}/{repo}/git/refs">
+			<param name="user" required="true" type="xsd:string" style="template">
+				<doc>Name of the user</doc>
+			</param>
+			<param name="repo" required="true" type="xsd:string" style="template">
+				<doc>Name of the repositoy</doc>
+			</param>
+			<method id="createReference" name="POST">
+				<apigee:tags>
+					<apigee:tag primary="true">References</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/git/refs/">
+					Create a Reference
+				</doc>
+				<request>
+					<param name="ref" required="true" type="xsd:string" style="query">
+						<doc>Name of the fully qualified reference (ie: refs/heads/master). If it doesn’t start with ‘refs’ and have at least two slashes, it will be rejected</doc>
+					</param>
+					<param name="sha" required="true" type="xsd:string" style="query">
+						<doc>SHA1 value to set this reference to</doc>
+					</param>
+					<representation mediaType="application/json"/>
+				</request>
+			</method>
+		</resource>
+
+		<resource path="repos/{user}/{repo}/git/tags/{sha}">
+			<param name="user" required="true" type="xsd:string" style="template">
+				<doc>Name of the user</doc>
+			</param>
+			<param name="repo" required="true" type="xsd:string" style="template">
+				<doc>Name of the repositoy</doc>
+			</param>
+			<param name="sha" required="true" type="xsd:string" style="template">
+				<doc>Tag SHA</doc>
+			</param>
+			<method id="getReference" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Tags</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/git/tags/">
+					Get a Tag
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="repos/{user}/{repo}/git/tags">
+			<param name="user" required="true" type="xsd:string" style="template">
+				<doc>Name of the user</doc>
+			</param>
+			<param name="repo" required="true" type="xsd:string" style="template">
+				<doc>Name of the repositoy</doc>
+			</param>
+			<method id="createReference" name="POST">
+				<apigee:tags>
+					<apigee:tag primary="true">Tags</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/git/tags/">
+					Create a Tag Object.
+					Note that creating a tag object does not create the reference that makes a tag in Git. If you want to create an annotated tag in Git, you have to do this call to create the tag object, and then create the `refs/tags/[tag]` reference. If you want to create a lightweight tag, you simply have to create the reference - this call would be unnecessary.
+				</doc>
+				<request>
+					<param name="tag" required="true" type="xsd:string" style="query">
+						<doc>Name of the tag</doc>
+					</param>
+					<param name="message" required="true" type="xsd:string" style="query">
+						<doc>Tag message</doc>
+					</param>
+					<param name="object" required="true" type="xsd:string" style="query">
+						<doc>SHA of the git object this is tagging</doc>
+					</param>
+					<param name="type" required="true" type="xsd:string" style="query">
+						<doc>Type of the object we’re tagging. Normally this is a commit but it can also be a tree or a blob.</doc>
+					</param>
+					<param name="tagger.name" required="false" type="xsd:string" style="query">
+						<doc>Name of the author of the tag</doc>
+					</param>
+					<param name="tagger.email" required="false" type="xsd:string" style="query">
+						<doc>Email of the author of the tag</doc>
+					</param>
+					<param name="tagger.date" required="false" type="xsd:dateTime" style="query">
+						<doc>When this object was tagged</doc>
+					</param>
+					<representation mediaType="application/json"/>
+				</request>
+			</method>
+		</resource>
+
+		<resource path="repos/{user}/{repo}/git/trees/{sha}">
+			<param name="user" required="true" type="xsd:string" style="template">
+				<doc>Name of the user</doc>
+			</param>
+			<param name="repo" required="true" type="xsd:string" style="template">
+				<doc>Name of the repositoy</doc>
+			</param>
+			<param name="sha" required="true" type="xsd:string" style="template">
+				<doc>Tree SHA</doc>
+			</param>
+			<method id="getReference" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Trees</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/git/trees/">
+					Get a Tree
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="repos/{user}/{repo}/git/trees/{sha}">
+			<param name="user" required="true" type="xsd:string" style="template">
+				<doc>Name of the user</doc>
+			</param>
+			<param name="repo" required="true" type="xsd:string" style="template">
+				<doc>Name of the repositoy</doc>
+			</param>
+			<param name="sha" required="true" type="xsd:string" style="template">
+				<doc>Tree SHA</doc>
+			</param>
+			<param name="recursive" required="false" type="xsd:string" style="query">
+				<doc>Set to `1` to get the tree recursively</doc>
+			<method id="getReference" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Trees</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/git/trees/">
+					Get a Tree
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="repos/{user}/{repo}/git/trees">
+			<param name="user" required="true" type="xsd:string" style="template">
+				<doc>Name of the user</doc>
+			</param>
+			<param name="repo" required="true" type="xsd:string" style="template">
+				<doc>Name of the repositoy</doc>
+			</param>
+			<method id="createTree" name="POST">
+				<apigee:tags>
+					<apigee:tag primary="true">Trees</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/git/trees/">
+					Create a Tree.
+					The tree creation API will take nested entries as well. If both a tree and a nested path modifying that tree are specified, it will overwrite the contents of that tree with the new path contents and write a new tree out.
+				</doc>
+				<request>
+					<param name="base_tree" required="false" type="xsd:string" style="query">
+						<doc>SHA1 of the tree you want to update with new data</doc>
+					</param>
+					<param name="tree.path" required="true" type="xsd:string" style="query">
+						<doc>File referenced in the tree</doc>
+					</param>
+					<param name="tree.mode" required="true" type="xsd:string" style="query">
+						<doc>File mode - one of `100644` for file (blob), `100755` for executable (blob), `040000` for subdirectory (tree), `160000` for submodule (commit) or `120000` for a blob that specifies the path of a symlink</doc>
+					</param>
+					<param name="tree.type" required="true" type="xsd:string" style="query">
+						<doc>`blob`, `tree`, or `commit`</doc>
+					</param>
+					<param name="tree.sha" required="false" type="xsd:string" style="query">
+						<doc>SHA1 checksum ID of the object in the tree</doc>
+					</param>
+					<param name="tree.content" required="false" type="xsd:string" style="query">
+						<doc>Content you want this file to have - GitHub will write this blob out and use that SHA for this entry. Use either this or `tree.sha`</doc>
+					</param>
+					<representation mediaType="application/json"/>
+				</request>
+			</method>
+		</resource>
+
+	</resources>
+
+</application>

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:apigee="http://api.apigee.com/wadl/2010/07/" xmlns="http://wadl.dev.java.net/2009/02"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:gd="http://schemas.google.com/g/2005"
+	xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://apigee.com/schemas/wadl-schema.xsd    http://api.apigee.com/wadl/2010/07/ http://apigee.com/schemas/apigee-wadl-extensions.xsd">
+<!--
+	<representation id="entry" mediaType="application/atom+xml" element="atom:entry">
+		<param name="category" ></param>
+	</representation>
+-->
+	<resources base="https://www.google.com/m8/feeds">
+
+		<resource path="contacts/{userEmail}/full">
+			<param name="userEmail" type="xsd:string" style="template" required="true" default="default">
+				<doc>Email of the user to receive contacts</doc>
+			</param>
+			<method id="getAllContacts" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Contacts</apigee:tag>
+				</apigee:tags>
+				<apigee:authentication required="true" />
+				<doc title=""
+					apigee:url="https://developers.google.com/google-apps/contacts/v3"><![CDATA[
+Retrieving all contacts of a user.
+
+/!\ Note: The special userEmail value default can be used to refer to the authenticated user. /!\
+                ]]></doc>
+               	<response>
+               		<representation mediaType="text/xml" />
+               	</response>
+			</method>
+
+			<method id="getContacts" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Contacts</apigee:tag>
+				</apigee:tags>
+				<apigee:authentication required="true" />
+				<doc title=""
+					apigee:url="https://developers.google.com/google-apps/contacts/v3"><![CDATA[
+                      The Contacts Data API lets you request a set of contacts that match specified criteria, such as requesting contacts created or updated in a given date range, or published by a particular author.
+                  ]]></doc>
+                <request>
+    				<param name="phone" type="xsd:string" style="query" required="false" default="json">
+						<doc>The type of feed to return, such as atom (the default), rss, or json.</doc>
+					</param>
+					<param name="q" type="xsd:string" style="query" required="true">
+						<doc>Fulltext query on contacts data fields. The API currently supports simple search queries such as q="term1 term2 term3"</doc>
+					</param>
+					<param name="max-results" type="xsd:integer" style="query" required="false">
+						<doc>The maximum number of entries to return. If you want to receive all of the contacts, rather than only the default maximum, you can specify a very large number for max-results.</doc>
+					</param>
+					<param name="start-index" type="xsd:integer" style="query" required="false">
+						<doc>The 1-based index of the first result to be retrieved (for paging).</doc>
+					</param>
+					<param name="updated-min" type="xsd:dateTime" style="query" required="false">
+						<doc>The lower bound on entry update dates.</doc>
+					</param>
+               	</request>
+               	<response>
+               		<representation mediaType="text/xml" />
+               	</response>
+			</method>
+		</resource>
+
+		<resource path="contacts/{userEmail}/full/{contactId}">
+			<param name="userEmail" type="xsd:string" style="template" required="true" default="default">
+				<doc>Email of the user who has the contact</doc>
+			</param>
+			<param name="contactId" type="xsd:string" style="template" required="true">
+				<doc>Id of the contact</doc>
+			</param>
+			<method id="getContact" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Contacts</apigee:tag>
+				</apigee:tags>
+				<apigee:authentication required="true" />
+				<doc title=""
+					apigee:url="https://developers.google.com/google-apps/contacts/v3"><![CDATA[
+Retrieving a single contact.
+
+/!\ Note: The special userEmail value default can be used to refer to the authenticated user. /!\
+                ]]></doc>
+               	<response>
+               		<representation mediaType="text/xml" />
+               	</response>
+			</method>
+		</resource>
+
+		<resource path="photos/media/{userEmail}/{contactId}">
+			<param name="userEmail" type="xsd:string" style="template" required="true" default="default">
+				<doc>Email of the user who has the contact</doc>
+			</param>
+			<param name="contactId" type="xsd:string" style="template" required="true">
+				<doc>Id of the contact</doc>
+			</param>
+			<method id="getPhoto" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Photos</apigee:tag>
+				</apigee:tags>
+				<apigee:authentication required="true" />
+				<doc title=""
+					apigee:url="https://developers.google.com/google-apps/contacts/v3"><![CDATA[
+Retrieving a contact's photo.
+
+/!\ Note: The special userEmail value default can be used to refer to the authenticated user. /!\
+                ]]></doc>
+               	<response>
+               		<representation mediaType="text/xml" />
+               	</response>
+			</method>
+		</resource>
+
+		<resource path="groups/{userEmail}/full">
+			<param name="userEmail" type="xsd:string" style="template" required="true" default="default">
+				<doc>Email of the user to receive all groups</doc>
+			</param>
+			<method id="getAllGroups" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Groups</apigee:tag>
+				</apigee:tags>
+				<apigee:authentication required="true" />
+				<doc title=""
+					apigee:url="https://developers.google.com/google-apps/contacts/v3"><![CDATA[
+Retrieving all contact groups.
+
+/!\ Note: The special userEmail value default can be used to refer to the authenticated user. /!\
+                ]]></doc>
+               	<response>
+               		<representation mediaType="text/xml" />
+               	</response>
+			</method>
+		</resource>
+
+		<resource path="groups/{userEmail}/full">
+			<param name="userEmail" type="xsd:string" style="template" required="true" default="default">
+				<doc>Email of the user to receive all groups</doc>
+			</param>
+			<method id="getGroups" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Groups</apigee:tag>
+				</apigee:tags>
+				<apigee:authentication required="true" />
+				<doc title=""
+					apigee:url="https://developers.google.com/google-apps/contacts/v3"><![CDATA[
+Retrieving contact groups using query parameters
+
+/!\ Note: The special userEmail value default can be used to refer to the authenticated user. /!\
+                ]]></doc>
+                <request>
+    				<param name="phone" type="xsd:string" style="query" required="false" default="json">
+						<doc>The type of feed to return, such as atom (the default), rss, or json.</doc>
+					</param>
+					<param name="q" type="xsd:string" style="query" required="true">
+						<doc>Fulltext query on contacts data fields. The API currently supports simple search queries such as q="term1 term2 term3"</doc>
+					</param>
+					<param name="max-results" type="xsd:integer" style="query" required="false">
+						<doc>The maximum number of entries to return. If you want to receive all of the contacts, rather than only the default maximum, you can specify a very large number for max-results.</doc>
+					</param>
+					<param name="start-index" type="xsd:integer" style="query" required="false">
+						<doc>The 1-based index of the first result to be retrieved (for paging).</doc>
+					</param>
+					<param name="updated-min" type="xsd:dateTime" style="query" required="false">
+						<doc>The lower bound on entry update dates.</doc>
+					</param>
+               	</request>
+               	<response>
+               		<representation mediaType="text/xml" />
+               	</response>
+			</method>
+		</resource>
+
+		<resource path="{userEmail}/full/{groupID}">
+			<param name="userEmail" type="xsd:string" style="template" required="true" default="default">
+				<doc>Email of the user to receive all groups</doc>
+			</param>
+			<param name="groupID" type="xsd:string" style="template" required="true">
+				<doc>ID of the group</doc>
+			</param>
+			<method id="getGroup" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Groups</apigee:tag>
+				</apigee:tags>
+				<apigee:authentication required="true" />
+				<doc title=""
+					apigee:url="https://developers.google.com/google-apps/contacts/v3"><![CDATA[
+Retrieving a single contact group
+
+/!\ Note: The special userEmail value default can be used to refer to the authenticated user. /!\
+                ]]></doc>
+               	<response>
+               		<representation mediaType="text/xml" />
+               	</response>
+			</method>
+		</resource>
+	</resources>
+
+</application>
+	

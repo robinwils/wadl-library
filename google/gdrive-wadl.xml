@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:apigee="http://api.apigee.com/wadl/2010/07/" xmlns="http://wadl.dev.java.net/2009/02"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:gd="http://schemas.google.com/g/2005"
+	xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://apigee.com/schemas/wadl-schema.xsd    http://api.apigee.com/wadl/2010/07/ http://apigee.com/schemas/apigee-wadl-extensions.xsd">
+
+	<resources base="https://www.googleapis.com/drive/v1">
+
+		<resource path="files/{id}">
+			<param name="id" type="xsd:string" style="template" required="true">
+				<doc>The ID for this file.</doc>
+			</param>
+			<method id="get" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Files</apigee:tag>
+				</apigee:tags>
+				<apigee:authentication required="true" />
+				<doc title=""
+					apigee:url="https://developers.google.com/drive/v1/reference/files/get"><![CDATA[
+Gets a file's metadata by ID. To download a file's content, send an authorized HTTP GET request to the file's downloadUrl.
+                ]]></doc>
+                <request>
+                	<param name="projection" type="xsd:string" style="query" required="false">
+                		<doc><![CDATA[Restrict information returned for simplicity and optimization. 
+
+Acceptable values are:
+"BASIC" - Includes only the basic metadata fields (as of Drive API v1, this includes all fields).
+"FULL" - Includes all metadata fields.]]></doc>
+					</param>
+					<param name="updateViewedDate" type="xsd:boolean" style="query" required="false">
+						<doc><![CDATA[
+Whether to update the view date after successfully retrieving the file. Default value is false.
+
+To download a file's content, send an authorized HTTP GET request to the file's downloadUrl.]]></doc>
+					</param>
+                </request>
+               	<response>
+               		<representation mediaType="application/json" />
+               	</response>
+			</method>
+		</resource>
+	</resources>
+
+</application>
+	

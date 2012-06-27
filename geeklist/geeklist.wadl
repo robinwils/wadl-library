@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:apigee="http://api.apigee.com/wadl/2010/07/"
+	xmlns="http://wadl.dev.java.net/2009/02" xmlns:t="urn:github:githubresponse"
+	xmlns:webshell="http://webshell.io/wadl/2012/06/"
+	xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://apigee.com/schemas/wadl-schema.xsd http://api.apigee.com/wadl/2010/07/ http://apigee.com/schemas/apigee-wadl-extensions.xsd http://webshell.io/wadl/2012/06/ http://webshell.io/wadl/webshell-extensions.xsd">
+
+	<resources base="http://api.geekli.st/v1">
+
+		<resource path="user">
+			<param name="page" required="false" type="xsd:integer" style="query" default="1">
+				<doc>Page of results. Will have as many as there are items to fetch.</doc>
+			</param>
+			<param name="count" required="false" type="xsd:integer" style="query" default="10">
+				<doc>Amount of items to fetch per page, cannot be larger than 50.</doc>
+			</param>
+			<method id="me" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Users</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="true"/>
+				<doc title="" apigee:url="http://hackers.geekli.st/">
+					Authenticated Users Data
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="users/{user}">
+			<param name="user" required="true" type="xsd:string" style="template">
+				<doc>Name of the user</doc>
+			</param>
+			<param name="page" required="false" type="xsd:integer" style="query" default="1">
+				<doc>Page of results. Will have as many as there are items to fetch.</doc>
+			</param>
+			<param name="count" required="false" type="xsd:integer" style="query" default="10">
+				<doc>Amount of items to fetch per page, cannot be larger than 50.</doc>
+			</param>
+			<method id="getUser" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Users</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="true"/>
+				<doc title="" apigee:url="http://hackers.geekli.st/">
+					Specified Users Data
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="user/cards">
+			<param name="page" required="false" type="xsd:integer" style="query" default="1">
+				<doc>Page of results. Will have as many as there are items to fetch.</doc>
+			</param>
+			<param name="count" required="false" type="xsd:integer" style="query" default="10">
+				<doc>Amount of items to fetch per page, cannot be larger than 50.</doc>
+			</param>
+			<method id="getCards" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Cards</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="true"/>
+				<doc title="" apigee:url="http://hackers.geekli.st/">
+					Authenticated Users Cards
+				</doc>
+			</method>
+			<method id="createCard" name="POST">
+				<apigee:tags>
+					<apigee:tag primary="true">Cards</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="true"/>
+				<doc title="" apigee:url="http://hackers.geekli.st/">
+					Create Card.
+					Returns the card JSON object as if you fetched it.
+				</doc>
+				<request>
+					<param name="headline" required="true" type="xsd:string" style="query">
+						<doc>Required string The content of the card.</doc>
+					</param>
+				</request>
+			</method>
+		</resource>
+
+		<resource path="user/micros">
+			<param name="page" required="false" type="xsd:integer" style="query" default="1">
+				<doc>Page of results. Will have as many as there are items to fetch.</doc>
+			</param>
+			<param name="count" required="false" type="xsd:integer" style="query" default="10">
+				<doc>Amount of items to fetch per page, cannot be larger than 50.</doc>
+			</param>
+			<method id="getMicros" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Micros</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="true"/>
+				<doc title="" apigee:url="http://hackers.geekli.st/">
+					Authenticated Users Micros
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="users/{user}/micros">
+			<param name="user" required="true" type="xsd:string" style="template">
+				<doc>Name of the user</doc>
+			</param>
+			<param name="page" required="false" type="xsd:integer" style="query" default="1">
+				<doc>Page of results. Will have as many as there are items to fetch.</doc>
+			</param>
+			<param name="count" required="false" type="xsd:integer" style="query" default="10">
+				<doc>Amount of items to fetch per page, cannot be larger than 50.</doc>
+			</param>
+			<method id="getUserMicros" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Micros</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="true"/>
+				<doc apigee:url="http://hackers.geekli.st/">
+					Specified Users Micros
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="micros/{id}">
+			<param name="page" required="false" type="xsd:integer" style="query" default="1">
+				<doc>Page of results. Will have as many as there are items to fetch.</doc>
+			</param>
+			<param name="count" required="false" type="xsd:integer" style="query" default="10">
+				<doc>Amount of items to fetch per page, cannot be larger than 50.</doc>
+			</param>
+			<param name="id" required="true" type="xsd:string" style="template">
+				<doc>Micro id</doc>
+			</param>
+			<method id="getMicro" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Micros</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="true"/>
+				<doc title="" apigee:url="http://hackers.geekli.st/">
+					Individual Micro
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="micros">
+			<param name="page" required="false" type="xsd:integer" style="query" default="1">
+				<doc>Page of results. Will have as many as there are items to fetch.</doc>
+			</param>
+			<param name="count" required="false" type="xsd:integer" style="query" default="10">
+				<doc>Amount of items to fetch per page, cannot be larger than 50.</doc>
+			</param>
+			<method id="createMicro" name="POST">
+				<apigee:tags>
+					<apigee:tag primary="true">Micros</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="true"/>
+				<doc title="" apigee:url="http://hackers.geekli.st/">
+					Create Macro.
+					Returns the micro JSON object as if you fetched it.
+				</doc>
+				<request>
+					<param name="type" required="false" type="xsd:string" style="query">
+						<doc>The type of item being replied to if any. Can be card or micro. Required if using in_replied_to.</doc>
+					</param>
+					<param name="in_reply_to" required="false" type="xsd:string" style="query">
+						<doc>The id of the card or micro being replied to. Required if using type.</doc>
+					</param>
+					<param name="status" required="true" type="xsd:string" style="query">
+						<doc>The content of the micro.</doc>
+					</param>
+				</request>
+			</method>
+		</resource>
+
+		<resource path="user/followers">
+			<param name="page" required="false" type="xsd:integer" style="query" default="1">
+				<doc>Page of results. Will have as many as there are items to fetch.</doc>
+			</param>
+			<param name="count" required="false" type="xsd:integer" style="query" default="10">
+				<doc>Amount of items to fetch per page, cannot be larger than 50.</doc>
+			</param>
+			<method id="getFollowers" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Follow</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="true"/>
+				<doc title="" apigee:url="http://hackers.geekli.st/">
+					Authenticated Users Followers
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="users/{user}/followers">
+			<param name="user" required="true" type="xsd:string" style="template">
+				<doc>Name of the user</doc>
+			</param>
+			<param name="page" required="false" type="xsd:integer" style="query" default="1">
+				<doc>Page of results. Will have as many as there are items to fetch.</doc>
+			</param>
+			<param name="count" required="false" type="xsd:integer" style="query" default="10">
+				<doc>Amount of items to fetch per page, cannot be larger than 50.</doc>
+			</param>
+			<method id="getUserFollowers" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Follow</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="true"/>
+				<doc apigee:url="http://hackers.geekli.st/">
+					Specified Users Followers
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="user/following">
+			<param name="page" required="false" type="xsd:integer" style="query" default="1">
+				<doc>Page of results. Will have as many as there are items to fetch.</doc>
+			</param>
+			<param name="count" required="false" type="xsd:integer" style="query" default="10">
+				<doc>Amount of items to fetch per page, cannot be larger than 50.</doc>
+			</param>
+			<method id="getFollowing" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Follow</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="true"/>
+				<doc title="" apigee:url="http://hackers.geekli.st/">
+					Authenticated Users Followers
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="users/{user}/following">
+			<param name="user" required="true" type="xsd:string" style="template">
+				<doc>Name of the user</doc>
+			</param>
+			<param name="page" required="false" type="xsd:integer" style="query" default="1">
+				<doc>Page of results. Will have as many as there are items to fetch.</doc>
+			</param>
+			<param name="count" required="false" type="xsd:integer" style="query" default="10">
+				<doc>Amount of items to fetch per page, cannot be larger than 50.</doc>
+			</param>
+			<method id="getUserFollowing" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Follow</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="true"/>
+				<doc apigee:url="http://hackers.geekli.st/">
+					Specified Users Followers
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="user/follow">
+			<param name="page" required="false" type="xsd:integer" style="query" default="1">
+				<doc>Page of results. Will have as many as there are items to fetch.</doc>
+			</param>
+			<param name="count" required="false" type="xsd:integer" style="query" default="10">
+				<doc>Amount of items to fetch per page, cannot be larger than 50.</doc>
+			</param>
+			<method id="follow" name="POST">
+				<apigee:tags>
+					<apigee:tag primary="true">Follow</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="true"/>
+				<doc title="" apigee:url="http://hackers.geekli.st/">
+					Follow User
+				</doc>
+				<request>
+					<param name="user" required="true" type="xsd:string" style="query">
+						<doc>The id of the user you want to follow.</doc>
+					</param>
+					<param name="action" required="false" type="xsd:string" style="query">
+						<doc>The action, if set then you will follow, otherwise will initiate an unfollow.</doc>
+					</param>
+				</request>
+			</method>
+		</resource>
+
+		<resource path="user/activity">
+			<param name="page" required="false" type="xsd:integer" style="query" default="1">
+				<doc>Page of results. Will have as many as there are items to fetch.</doc>
+			</param>
+			<param name="count" required="false" type="xsd:integer" style="query" default="10">
+				<doc>Amount of items to fetch per page, cannot be larger than 50.</doc>
+			</param>
+			<method id="getActivity" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Activity</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="true"/>
+				<doc title="" apigee:url="http://hackers.geekli.st/">
+					Authenticated Users Activity
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="users/{user}/activity">
+			<param name="user" required="true" type="xsd:string" style="template">
+				<doc>Name of the user</doc>
+			</param>
+			<param name="page" required="false" type="xsd:integer" style="query" default="1">
+				<doc>Page of results. Will have as many as there are items to fetch.</doc>
+			</param>
+			<param name="count" required="false" type="xsd:integer" style="query" default="10">
+				<doc>Amount of items to fetch per page, cannot be larger than 50.</doc>
+			</param>
+			<method id="getUserActivity" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Activity</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="true"/>
+				<doc apigee:url="http://hackers.geekli.st/">
+					Specified Users Activity
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="activity">
+			<param name="page" required="false" type="xsd:integer" style="query" default="1">
+				<doc>Page of results. Will have as many as there are items to fetch.</doc>
+			</param>
+			<param name="count" required="false" type="xsd:integer" style="query" default="10">
+				<doc>Amount of items to fetch per page, cannot be larger than 50.</doc>
+			</param>
+			<method id="getAllActivity" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Activity</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="true"/>
+				<doc title="" apigee:url="http://hackers.geekli.st/">
+					All Activity
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="highfive">
+			<param name="page" required="false" type="xsd:integer" style="query" default="1">
+				<doc>Page of results. Will have as many as there are items to fetch.</doc>
+			</param>
+			<param name="count" required="false" type="xsd:integer" style="query" default="10">
+				<doc>Amount of items to fetch per page, cannot be larger than 50.</doc>
+			</param>
+			<method id="highfive" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Highfive</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="true"/>
+				<doc title="" apigee:url="http://hackers.geekli.st/">
+					Highfive Item
+				</doc>
+			</method>
+		</resource>
+	</resources>
+</application>

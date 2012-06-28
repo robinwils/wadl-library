@@ -246,7 +246,7 @@
 				<doc>Name of the user</doc>
 			</param>
 			<param name="repo" required="true" type="xsd:string" style="template">
-				<doc>Name of the repositoy</doc>
+				<doc>Name of the repository</doc>
 			</param>
 			<param name="sha" required="true" type="xsd:string" style="template">
 				<doc>Blob SHA</doc>
@@ -267,7 +267,7 @@
 				<doc>Name of the user</doc>
 			</param>
 			<param name="repo" required="true" type="xsd:string" style="template">
-				<doc>Name of the repositoy</doc>
+				<doc>Name of the repository</doc>
 			</param>
 			<method id="createBlob" name="POST">
 				<apigee:tags>
@@ -293,7 +293,7 @@
 				<doc>Name of the user</doc>
 			</param>
 			<param name="repo" required="true" type="xsd:string" style="template">
-				<doc>Name of the repositoy</doc>
+				<doc>Name of the repository</doc>
 			</param>
 			<param name="sha" required="true" type="xsd:string" style="template">
 				<doc>Commit SHA</doc>
@@ -314,7 +314,7 @@
 				<doc>Name of the user</doc>
 			</param>
 			<param name="repo" required="true" type="xsd:string" style="template">
-				<doc>Name of the repositoy</doc>
+				<doc>Name of the repository</doc>
 			</param>
 			<method id="createBlob" name="POST">
 				<apigee:tags>
@@ -361,7 +361,7 @@
 				<doc>Name of the user</doc>
 			</param>
 			<param name="repo" required="true" type="xsd:string" style="template">
-				<doc>Name of the repositoy</doc>
+				<doc>Name of the repository</doc>
 			</param>
 			<method id="getReference" name="GET">
 				<apigee:tags>
@@ -432,7 +432,7 @@
 				<doc>Name of the user</doc>
 			</param>
 			<param name="repo" required="true" type="xsd:string" style="template">
-				<doc>Name of the repositoy</doc>
+				<doc>Name of the repository</doc>
 			</param>
 			<method id="listReferences" name="GET">
 				<apigee:tags>
@@ -468,7 +468,7 @@
 				<doc>Name of the user</doc>
 			</param>
 			<param name="repo" required="true" type="xsd:string" style="template">
-				<doc>Name of the repositoy</doc>
+				<doc>Name of the repository</doc>
 			</param>
 			<param name="sha" required="true" type="xsd:string" style="template">
 				<doc>Tag SHA</doc>
@@ -489,7 +489,7 @@
 				<doc>Name of the user</doc>
 			</param>
 			<param name="repo" required="true" type="xsd:string" style="template">
-				<doc>Name of the repositoy</doc>
+				<doc>Name of the repository</doc>
 			</param>
 			<method id="createReference" name="POST">
 				<apigee:tags>
@@ -531,7 +531,7 @@
 				<doc>Name of the user</doc>
 			</param>
 			<param name="repo" required="true" type="xsd:string" style="template">
-				<doc>Name of the repositoy</doc>
+				<doc>Name of the repository</doc>
 			</param>
 			<param name="sha" required="true" type="xsd:string" style="template">
 				<doc>Tree SHA</doc>
@@ -552,7 +552,7 @@
 				<doc>Name of the user</doc>
 			</param>
 			<param name="repo" required="true" type="xsd:string" style="template">
-				<doc>Name of the repositoy</doc>
+				<doc>Name of the repository</doc>
 			</param>
 			<param name="sha" required="true" type="xsd:string" style="template">
 				<doc>Tree SHA</doc>
@@ -576,7 +576,7 @@
 				<doc>Name of the user</doc>
 			</param>
 			<param name="repo" required="true" type="xsd:string" style="template">
-				<doc>Name of the repositoy</doc>
+				<doc>Name of the repository</doc>
 			</param>
 			<method id="createTree" name="POST">
 				<apigee:tags>
@@ -652,7 +652,7 @@
 				<doc>Name of the user</doc>
 			</param>
 			<param name="repo" required="true" type="xsd:string" style="template">
-				<doc>Name of the repositoy</doc>
+				<doc>Name of the repository</doc>
 			</param>
 			<method id="listRepoIssues" name="GET">
 				<apigee:tags>
@@ -730,7 +730,7 @@
 				<doc>Name of the user</doc>
 			</param>
 			<param name="repo" required="true" type="xsd:string" style="template">
-				<doc>Name of the repositoy</doc>
+				<doc>Name of the repository</doc>
 			</param>
 			<param name="number" required="true" type="xsd:integer" style="template">
 				<doc>Number of the issue</doc>
@@ -780,7 +780,7 @@
 				<doc>Name of the user</doc>
 			</param>
 			<param name="repo" required="true" type="xsd:string" style="template">
-				<doc>Name of the repositoy</doc>
+				<doc>Name of the repository</doc>
 			</param>
 			<param name="number" required="true" type="xsd:integer" style="template">
 				<doc>Number of the issue</doc>
@@ -794,7 +794,7 @@
 					List comments on an issue
 				</doc>
 			</method>
-			<method id="gistPostComment" name="POST">
+			<method id="postIssueComment" name="POST">
 				<apigee:tags>
 					<apigee:tag primary="true">Issues</apigee:tag>
 				</apigee:tags>
@@ -815,7 +815,7 @@
 				<doc>Name of the user</doc>
 			</param>
 			<param name="repo" required="true" type="xsd:string" style="template">
-				<doc>Name of the repositoy</doc>
+				<doc>Name of the repository</doc>
 			</param>
 			<param name="number" required="true" type="xsd:integer" style="template">
 				<doc>Number of the issue</doc>
@@ -862,7 +862,7 @@
 				<doc>Name of the user</doc>
 			</param>
 			<param name="repo" required="true" type="xsd:string" style="template">
-				<doc>Name of the repositoy</doc>
+				<doc>Name of the repository</doc>
 			</param>
 			<param name="number" required="true" type="xsd:integer" style="template">
 				<doc>Number of the issue</doc>
@@ -883,7 +883,7 @@
 				<doc>Name of the user</doc>
 			</param>
 			<param name="repo" required="true" type="xsd:string" style="template">
-				<doc>Name of the repositoy</doc>
+				<doc>Name of the repository</doc>
 			</param>
 			<method id="listRepoEvents" name="GET">
 				<apigee:tags>
@@ -901,7 +901,7 @@
 				<doc>Name of the user</doc>
 			</param>
 			<param name="repo" required="true" type="xsd:string" style="template">
-				<doc>Name of the repositoy</doc>
+				<doc>Name of the repository</doc>
 			</param>
 			<param name="id" required="true" type="xsd:string" style="template">
 				<doc>Issue event id</doc>
@@ -922,7 +922,7 @@
 				<doc>Name of the user</doc>
 			</param>
 			<param name="repo" required="true" type="xsd:string" style="template">
-				<doc>Name of the repositoy</doc>
+				<doc>Name of the repository</doc>
 			</param>
 			<param name="number" required="true" type="xsd:integer" style="template">
 				<doc>Number of the issue</doc>
@@ -972,7 +972,7 @@
 				<doc>Name of the user</doc>
 			</param>
 			<param name="repo" required="true" type="xsd:string" style="template">
-				<doc>Name of the repositoy</doc>
+				<doc>Name of the repository</doc>
 			</param>
 			<param name="number" required="true" type="xsd:integer" style="template">
 				<doc>Number of the issue</doc>
@@ -996,7 +996,7 @@
 				<doc>Name of the user</doc>
 			</param>
 			<param name="repo" required="true" type="xsd:string" style="template">
-				<doc>Name of the repositoy</doc>
+				<doc>Name of the repository</doc>
 			</param>
 			<method id="listLabels" name="GET">
 				<apigee:tags>
@@ -1031,7 +1031,7 @@
 				<doc>Name of the user</doc>
 			</param>
 			<param name="repo" required="true" type="xsd:string" style="template">
-				<doc>Name of the repositoy</doc>
+				<doc>Name of the repository</doc>
 			</param>
 			<param name="name" required="true" type="xsd:string" style="template">
 				<doc>Label name</doc>
@@ -1078,7 +1078,7 @@
 				<doc>Name of the user</doc>
 			</param>
 			<param name="repo" required="true" type="xsd:string" style="template">
-				<doc>Name of the repositoy</doc>
+				<doc>Name of the repository</doc>
 			</param>
 			<param name="number" required="true" type="xsd:integer" style="template">
 				<doc>Number of the milestone</doc>
@@ -1099,7 +1099,7 @@
 				<doc>Name of the user</doc>
 			</param>
 			<param name="repo" required="true" type="xsd:string" style="template">
-				<doc>Name of the repositoy</doc>
+				<doc>Name of the repository</doc>
 			</param>
 			<method id="listMilestones" name="GET">
 				<apigee:tags>
@@ -1140,7 +1140,7 @@
 				<doc>Name of the user</doc>
 			</param>
 			<param name="repo" required="true" type="xsd:string" style="template">
-				<doc>Name of the repositoy</doc>
+				<doc>Name of the repository</doc>
 			</param>
 			<param name="number" required="true" type="xsd:integer" style="template">
 				<doc>Number of the milestone</doc>
@@ -1512,11 +1512,14 @@
 		</resource>
 
 		<resource path="teams/{id}/repos/{user}/{repo}">
-			<param name="id" required="true" type="xsd:string" style="template">
-				<doc>Team id</doc>
-			</param>
 			<param name="user" required="true" type="xsd:string" style="template">
 				<doc>Name of the user</doc>
+			</param>
+			<param name="repo" required="true" type="xsd:string" style="template">
+				<doc>Name of the repository</doc>
+			</param>
+			<param name="id" required="true" type="xsd:string" style="template">
+				<doc>Team id</doc>
 			</param>
 			<method id="getTeamRepo" name="GET">
 				<apigee:tags>
@@ -1549,6 +1552,1866 @@
 				</doc>
 			</method>
 		</resource>
+
+		<resource path="repos/{user}/{repo}/pulls">
+			<param name="user" required="true" type="xsd:string" style="template">
+				<doc>Name of the user</doc>
+			</param>
+			<param name="repo" required="true" type="xsd:string" style="template">
+				<doc>Name of the repository</doc>
+			</param>
+			<method id="listPullRequests" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Pull requests</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/orgs/pulls/">
+					List pull requests
+				</doc>
+				<request>
+					<param name="state" required="false" type="xsd:string" style="query" default="open">
+						<doc>`open` or `closed` to filter by state.</doc>
+					</param>
+				</request>
+			</method>
+			<method id="createPullRequest" name="POST">
+				<apigee:tags>
+					<apigee:tag primary="true">Pull requests</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/orgs/pulls/">
+					Create a pull request.
+					NOTE: `head` and `base` can be either a sha or a branch name. Typically you would namespace `head` with a user like this: `username:branch`.
+				</doc>
+				<request>
+					<param name="title" required="true" type="xsd:string" style="query">
+						<doc>Pull request title</doc>
+					</param>
+					<param name="body" required="false" type="xsd:string" style="query">
+						<doc>Pull request description</doc>
+					</param>
+					<param name="base" required="true" type="xsd:string" style="query">
+						<doc>The branch (or git ref) you want your changes pulled into. This should be an existing branch on the current repository. You cannot submit a pull request to one repo that requests a merge to a base of another repo.</doc>
+					</param>
+					<param name="head" required="true" type="xsd:string" style="query">
+						<doc>The branch (or git ref) where your changes are implemented.</doc>
+					</param>
+				</request>
+			</method>
+			<method id="createPullRequestFromIssue" name="POST">
+				<apigee:tags>
+					<apigee:tag primary="true">Pull requests</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/orgs/pulls/">
+					Create a pull request from an existing Issue.
+				</doc>
+				<request>
+					<param name="issue" required="true" type="xsd:integer" style="query">
+						<doc>Issue number in this repository to turn into a Pull Request.</doc>
+					</param>
+					<param name="base" required="true" type="xsd:string" style="query">
+						<doc>The branch (or git ref) you want your changes pulled into. This should be an existing branch on the current repository. You cannot submit a pull request to one repo that requests a merge to a base of another repo.</doc>
+					</param>
+					<param name="head" required="true" type="xsd:string" style="query">
+						<doc>The branch (or git ref) where your changes are implemented.</doc>
+					</param>
+				</request>
+			</method>
+		</resource>
+
+		<resource path="repos/{user}/{repo}/pulls/{number}">
+			<param name="user" required="true" type="xsd:string" style="template">
+				<doc>Name of the user</doc>
+			</param>
+			<param name="repo" required="true" type="xsd:string" style="template">
+				<doc>Name of the repository</doc>
+			</param>
+			<param name="number" required="true" type="xsd:integer" style="template">
+				<doc>Pull request number</doc>
+			</param>
+			<method id="updatePullRequest" name="PATCH">
+				<apigee:tags>
+					<apigee:tag primary="true">Pull requests</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/orgs/pulls/">
+					Update a pull request.
+					NOTE: `head` and `base` can be either a sha or a branch name. Typically you would namespace `head` with a user like this: `username:branch`.
+				</doc>
+				<request>
+					<param name="title" required="true" type="xsd:string" style="query">
+						<doc>Pull request title</doc>
+					</param>
+					<param name="body" required="false" type="xsd:string" style="query">
+						<doc>Pull request description</doc>
+					</param>
+					<param name="state" required="false" type="xsd:string" style="query">
+						<doc>`open` or `closed` to filter by state.</doc>
+					</param>
+				</request>
+			</method>
+		</resource>
+
+		<resource path="repos/{user}/{repo}/pulls/{number}/commits">
+			<param name="user" required="true" type="xsd:string" style="template">
+				<doc>Name of the user</doc>
+			</param>
+			<param name="repo" required="true" type="xsd:string" style="template">
+				<doc>Name of the repository</doc>
+			</param>
+			<param name="number" required="true" type="xsd:integer" style="template">
+				<doc>Pull request number</doc>
+			</param>
+			<method id="listPullRequestCommits" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Pull requests</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/orgs/pulls/">
+					List commits on a pull request
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="repos/{user}/{repo}/pulls/{number}/files">
+			<param name="user" required="true" type="xsd:string" style="template">
+				<doc>Name of the user</doc>
+			</param>
+			<param name="repo" required="true" type="xsd:string" style="template">
+				<doc>Name of the repository</doc>
+			</param>
+			<param name="number" required="true" type="xsd:integer" style="template">
+				<doc>Pull request number</doc>
+			</param>
+			<method id="listPullRequestFiles" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Pull requests</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/orgs/pulls/">
+					List pull requests files
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="repos/{user}/{repo}/pulls/{number}/merge">
+			<param name="user" required="true" type="xsd:string" style="template">
+				<doc>Name of the user</doc>
+			</param>
+			<param name="repo" required="true" type="xsd:string" style="template">
+				<doc>Name of the repository</doc>
+			</param>
+			<param name="number" required="true" type="xsd:integer" style="template">
+				<doc>Pull request number</doc>
+			</param>
+			<method id="checkPullRequestMerged" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Pull requests</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/orgs/pulls/">
+					Get if a pull request has been merged
+				</doc>
+			</method>
+			<method id="mergePullRequest" name="PUT">
+				<apigee:tags>
+					<apigee:tag primary="true">Pull requests</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/orgs/pulls/">
+					Merge a pull request
+				</doc>
+				<request>
+					<param name="commit_message" required="false" type="xsd:string" style="query">
+						<doc>The message that will be used for the merge commit</doc>
+					</param>
+				</request>
+			</method>
+		</resource>
+
+		<resource path="repos/{user}/{repo}/pulls/{number}/comments">
+			<param name="user" required="true" type="xsd:string" style="template">
+				<doc>Name of the user</doc>
+			</param>
+			<param name="repo" required="true" type="xsd:string" style="template">
+				<doc>Name of the repository</doc>
+			</param>
+			<param name="number" required="true" type="xsd:integer" style="template">
+				<doc>Number of the issue</doc>
+			</param>
+			<method id="listPullRequestComments" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Pull requests</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/issues/pulls/">
+					List comments on a pull request
+				</doc>
+			</method>
+			<method id="postPullRequestComment" name="POST">
+				<apigee:tags>
+					<apigee:tag primary="true">Pull requests</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/issues/pulls/">
+					Create a comment on a pull request
+				</doc>
+				<request>
+					<param name="body" required="true" type="xsd:string" style="query">
+						<doc>Content of the comment</doc>
+					</param>
+				</request>
+			</method>
+		</resource>
+
+		<resource path="repos/{user}/{repo}/pulls/{number}/comments/{id}">
+			<param name="user" required="true" type="xsd:string" style="template">
+				<doc>Name of the user</doc>
+			</param>
+			<param name="repo" required="true" type="xsd:string" style="template">
+				<doc>Name of the repository</doc>
+			</param>
+			<param name="number" required="true" type="xsd:integer" style="template">
+				<doc>Number of the pull request</doc>
+			</param>
+			<param name="id" required="true" type="xsd:string" style="template">
+				<doc>Pull request comment id</doc>
+			</param>
+			<method id="getPullRequestComment" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Pull requests</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/pulls/comments/">
+					Get a single comment on a pull request
+				</doc>
+			</method>
+			<method id="editPullRequestComment" name="PATCH">
+				<apigee:tags>
+					<apigee:tag primary="true">Pull requests</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/pulls/comments/">
+					Edit a comment on a pull request
+				</doc>
+				<request>
+					<param name="body" required="true" type="xsd:string" style="query">
+						<doc>Content of the comment</doc>
+					</param>
+				</request>
+			</method>
+			<method id="deletePullRequestComment" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Pull requests</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/pulls/comments/">
+					Delete a comment on a pull request
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="user/repos">
+			<method id="listRepos" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Repos</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="true"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/repos/">
+					List repositories for the authenticated user.
+				</doc>
+				<request>
+					<param name="type" required="false" type="xsd:string" style="query" default="all">
+						<doc>`all`, `owner`, `public`, `private` or `member`</doc>
+					</param>
+					<param name="sort" required="false" type="xsd:string" style="query" default="full_name">
+						<doc>`created`, `updated`, `pushed` or `full_name`</doc>
+					</param>
+					<param name="direction" required="false" type="xsd:string" style="query">
+						<doc>`asc` or `desc`, default: when using `full_name`: `asc`, otherwise `desc`.</doc>
+					</param>
+				</request>
+			</method>
+			<method id="createRepo" name="POST">
+				<apigee:tags>
+					<apigee:tag primary="true">Repos</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/issues/repos/">
+					Create a new repository for the authenticated user.
+				</doc>
+				<request>
+					<param name="name" required="true" type="xsd:string" style="query">
+						<doc>Repository name</doc>
+					</param>
+					<param name="description" required="false" type="xsd:string" style="query">
+						<doc>Repository description</doc>
+					</param>
+					<param name="homepage" required="false" type="xsd:string" style="query">
+						<doc>Repository homepage</doc>
+					</param>
+					<param name="private" required="false" type="xsd:boolean" style="query" default="false">
+						<doc>`true` to create a private repository, `false` to create a public one. Creating private repositories requires a paid GitHub account.</doc>
+					</param>
+					<param name="has_issues" required="false" type="xsd:boolean" style="query" default="true">
+						<doc>`true` to enable issues for this repository, `false` to disable them.</doc>
+					</param>
+					<param name="has_wiki" required="false" type="xsd:boolean" style="query" default="true">
+						<doc>`true` to enable the wiki for this repository, `false` to disable it.</doc>
+					</param>
+					<param name="has_downloads" required="false" type="xsd:boolean" style="query" default="true">
+						<doc>`true` to enable downloads for this repository, `false` to disable them.</doc>
+					</param>
+					<param name="team_id" required="false" type="xsd:integer" style="query">
+						<doc>The id of the team that will be granted access to this repository. This is only valid when creating a repo in an organization.</doc>
+					</param>
+				</request>
+			</method>
+		</resource>
+
+		<resource path="users/{user}/repos">
+			<param name="user" required="true" type="xsd:string" style="template">
+				<doc>Name of the user</doc>
+			</param>
+			<method id="listUserRepos" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Repos</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="true"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/repos/">
+					List public repositories for the specified user.
+				</doc>
+				<request>
+					<param name="type" required="false" type="xsd:string" style="query" default="all">
+						<doc>`all`, `owner`, `public`, `private` or `member`</doc>
+					</param>
+					<param name="sort" required="false" type="xsd:string" style="query" default="full_name">
+						<doc>`created`, `updated`, `pushed` or `full_name`</doc>
+					</param>
+					<param name="direction" required="false" type="xsd:string" style="query">
+						<doc>`asc` or `desc`, default: when using `full_name`: `asc`, otherwise `desc`.</doc>
+					</param>
+				</request>
+			</method>
+		</resource>
+
+		<resource path="orgs/{org}/repos">
+			<param name="org" required="true" type="xsd:string" style="template">
+				<doc>Organization name</doc>
+			</param>
+			<method id="listOrgRepos" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Repos</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="true"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/repos/">
+					List repositories for the specified org.
+				</doc>
+				<request>
+					<param name="type" required="false" type="xsd:string" style="query" default="all">
+						<doc>`all`, `owner`, `public`, `private` or `member`</doc>
+					</param>
+					<param name="sort" required="false" type="xsd:string" style="query" default="full_name">
+						<doc>`created`, `updated`, `pushed` or `full_name`</doc>
+					</param>
+					<param name="direction" required="false" type="xsd:string" style="query">
+						<doc>`asc` or `desc`, default: when using `full_name`: `asc`, otherwise `desc`.</doc>
+					</param>
+				</request>
+			</method>
+			<method id="createOrgRepo" name="POST">
+				<apigee:tags>
+					<apigee:tag primary="true">Repos</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/issues/repos/">
+					Create a new repository in this organization. The authenticated user must be a member of `org`.
+				</doc>
+				<request>
+					<param name="name" required="true" type="xsd:string" style="query">
+						<doc>Repository name</doc>
+					</param>
+					<param name="description" required="false" type="xsd:string" style="query">
+						<doc>Repository description</doc>
+					</param>
+					<param name="homepage" required="false" type="xsd:string" style="query">
+						<doc>Repository homepage</doc>
+					</param>
+					<param name="private" required="false" type="xsd:boolean" style="query" default="false">
+						<doc>`true` to create a private repository, `false` to create a public one. Creating private repositories requires a paid GitHub account.</doc>
+					</param>
+					<param name="has_issues" required="false" type="xsd:boolean" style="query" default="true">
+						<doc>`true` to enable issues for this repository, `false` to disable them.</doc>
+					</param>
+					<param name="has_wiki" required="false" type="xsd:boolean" style="query" default="true">
+						<doc>`true` to enable the wiki for this repository, `false` to disable it.</doc>
+					</param>
+					<param name="has_downloads" required="false" type="xsd:boolean" style="query" default="true">
+						<doc>`true` to enable downloads for this repository, `false` to disable them.</doc>
+					</param>
+					<param name="team_id" required="false" type="xsd:integer" style="query">
+						<doc>The id of the team that will be granted access to this repository. This is only valid when creating a repo in an organization.</doc>
+					</param>
+				</request>
+			</method>
+		</resource>
+
+		<resource path="repos/{user}/{repo}">
+			<param name="user" required="true" type="xsd:string" style="template">
+				<doc>Name of the user</doc>
+			</param>
+			<param name="repo" required="true" type="xsd:string" style="template">
+				<doc>Name of the repository</doc>
+			</param>
+			<method id="getRepo" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Repos</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="true"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/repos/">
+					Get a repository.
+				</doc>
+			</method>
+			<method id="updateRepo" name="PATCH">
+				<apigee:tags>
+					<apigee:tag primary="true">Repos</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/issues/repos/">
+					Edit a repository.
+				</doc>
+				<request>
+					<param name="name" required="true" type="xsd:string" style="query">
+						<doc>Repository name</doc>
+					</param>
+					<param name="description" required="false" type="xsd:string" style="query">
+						<doc>Repository description</doc>
+					</param>
+					<param name="homepage" required="false" type="xsd:string" style="query">
+						<doc>Repository homepage</doc>
+					</param>
+					<param name="private" required="false" type="xsd:boolean" style="query" default="false">
+						<doc>`true` to create a private repository, `false` to create a public one. Creating private repositories requires a paid GitHub account.</doc>
+					</param>
+					<param name="has_issues" required="false" type="xsd:boolean" style="query" default="true">
+						<doc>`true` to enable issues for this repository, `false` to disable them.</doc>
+					</param>
+					<param name="has_wiki" required="false" type="xsd:boolean" style="query" default="true">
+						<doc>`true` to enable the wiki for this repository, `false` to disable it.</doc>
+					</param>
+					<param name="has_downloads" required="false" type="xsd:boolean" style="query" default="true">
+						<doc>`true` to enable downloads for this repository, `false` to disable them.</doc>
+					</param>
+					<param name="team_id" required="false" type="xsd:integer" style="query">
+						<doc>The id of the team that will be granted access to this repository. This is only valid when creating a repo in an organization.</doc>
+					</param>
+				</request>
+			</method>
+			<method id="deleteRepo" name="DELETE">
+				<apigee:tags>
+					<apigee:tag primary="true">Repos</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="true"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/repos/">
+					Delete a repository.
+					Deleting a repository requires admin access. If OAuth is used, the `delete_repo` scope is required.
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="repos/{user}/{repo}/contributors">
+			<param name="user" required="true" type="xsd:string" style="template">
+				<doc>Name of the user</doc>
+			</param>
+			<param name="repo" required="true" type="xsd:string" style="template">
+				<doc>Name of the repository</doc>
+			</param>
+			<method id="listContributors" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Repos</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="true"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/repos/">
+					List repository contributors
+				</doc>
+				<request>
+					<param name="anon" required="false" type="xsd:boolean" style="query">
+						<doc>Set to `true` to include anonymous contributors in results.</doc>
+					</param>
+				</request>
+			</method>
+		</resource>
+
+		<resource path="repos/{user}/{repo}/languages">
+			<param name="user" required="true" type="xsd:string" style="template">
+				<doc>Name of the user</doc>
+			</param>
+			<param name="repo" required="true" type="xsd:string" style="template">
+				<doc>Name of the repository</doc>
+			</param>
+			<method id="listLanguages" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Repos</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="true"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/repos/">
+					List repository languages
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="repos/{user}/{repo}/teams">
+			<param name="user" required="true" type="xsd:string" style="template">
+				<doc>Name of the user</doc>
+			</param>
+			<param name="repo" required="true" type="xsd:string" style="template">
+				<doc>Name of the repository</doc>
+			</param>
+			<method id="listTeams" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Repos</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="true"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/repos/">
+					List repository teams
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="repos/{user}/{repo}/tags">
+			<param name="user" required="true" type="xsd:string" style="template">
+				<doc>Name of the user</doc>
+			</param>
+			<param name="repo" required="true" type="xsd:string" style="template">
+				<doc>Name of the repository</doc>
+			</param>
+			<method id="listTags" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Repos</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="true"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/repos/">
+					List repository tags
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="repos/{user}/{repo}/branches">
+			<param name="user" required="true" type="xsd:string" style="template">
+				<doc>Name of the user</doc>
+			</param>
+			<param name="repo" required="true" type="xsd:string" style="template">
+				<doc>Name of the repository</doc>
+			</param>
+			<method id="listBranches" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Repos</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="true"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/repos/">
+					List repository branches
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="repos/{user}/{repo}/branches/{branch}">
+			<param name="user" required="true" type="xsd:string" style="template">
+				<doc>Name of the user</doc>
+			</param>
+			<param name="repo" required="true" type="xsd:string" style="template">
+				<doc>Name of the repository</doc>
+			</param>
+			<param name="branch" required="true" type="xsd:string" style="template">
+				<doc>Name of the branch</doc>
+			</param>
+			<method id="getBranch" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Repos</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="true"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/repos/">
+					Get a repository branch
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="repos/{user}/{repo}/collaborators">
+			<param name="user" required="true" type="xsd:string" style="template">
+				<doc>Name of the user</doc>
+			</param>
+			<param name="repo" required="true" type="xsd:string" style="template">
+				<doc>Name of the repository</doc>
+			</param>
+			<method id="listCollaborators" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Repos</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="true"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/repos/collaborators/">
+					List repository collaborators
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="repos/{user}/{repo}/collaborators/{collaborator}">
+			<param name="user" required="true" type="xsd:string" style="template">
+				<doc>Name of the user</doc>
+			</param>
+			<param name="repo" required="true" type="xsd:string" style="template">
+				<doc>Name of the repository</doc>
+			</param>
+			<param name="collaborator" required="true" type="xsd:string" style="template">
+				<doc>Name of the collaborator user</doc>
+			</param>
+			<method id="checkCollaborator" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Repos</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="true"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/repos/collaborators/">
+					Check if a user is a collaborator
+				</doc>
+			</method>
+			<method id="addCollaborator" name="PUT">
+				<apigee:tags>
+					<apigee:tag primary="true">Repos</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/issues/repos/collaborators/">
+					Add a collaborator
+				</doc>
+			</method>
+			<method id="removeCollaborator" name="DELETE">
+				<apigee:tags>
+					<apigee:tag primary="true">Repos</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="true"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/repos/collaborators/">
+					Remove a collaborator
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="repos/{user}/{repo}/comments">
+			<param name="user" required="true" type="xsd:string" style="template">
+				<doc>Name of the user</doc>
+			</param>
+			<param name="repo" required="true" type="xsd:string" style="template">
+				<doc>Name of the repository</doc>
+			</param>
+			<method id="listCommitsComments" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Repos</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/repos/comments/">
+					List commit comments for a repository.
+					Comments are ordered by ascending ID.
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="repos/{user}/{repo}/comments/{id}">
+			<param name="user" required="true" type="xsd:string" style="template">
+				<doc>Name of the user</doc>
+			</param>
+			<param name="repo" required="true" type="xsd:string" style="template">
+				<doc>Name of the repository</doc>
+			</param>
+			<param name="id" required="true" type="xsd:string" style="template">
+				<doc>Commit comment id</doc>
+			</param>
+			<method id="getCommitComment" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Repos</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/repos/comments/">
+					Get a single commit comment
+				</doc>
+			</method>
+			<method id="editCommitComment" name="PATCH">
+				<apigee:tags>
+					<apigee:tag primary="true">Repos</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/repos/comments/">
+					Update a commit comment
+				</doc>
+				<request>
+					<param name="body" required="true" type="xsd:string" style="query">
+						<doc>Content of the comment</doc>
+					</param>
+				</request>
+			</method>
+			<method id="deleteCommitComment" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Repos</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/repos/comments/">
+					Delete a commit comment
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="repos/{user}/{repo}/commits/{sha}/comments">
+			<param name="user" required="true" type="xsd:string" style="template">
+				<doc>Name of the user</doc>
+			</param>
+			<param name="repo" required="true" type="xsd:string" style="template">
+				<doc>Name of the repository</doc>
+			</param>
+			<param name="sha" required="true" type="xsd:string" style="template">
+				<doc>SHA of the commit</doc>
+			</param>
+			<method id="listCommitComments" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Repos</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/repos/comments/">
+					List comments for a single commit
+				</doc>
+			</method>
+			<method id="postCommitComment" name="POST">
+				<apigee:tags>
+					<apigee:tag primary="true">Repos</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/repos/comments/">
+					Create a commit comment
+				</doc>
+				<request>
+					<param name="body" required="true" type="xsd:string" style="query">
+						<doc>Content of the comment</doc>
+					</param>
+					<param name="commit_id" required="true" type="xsd:string" style="query">
+						<doc>Sha of the commit to comment on.</doc>
+					</param>
+					<param name="line" required="true" type="xsd:integer" style="query">
+						<doc>Line number in the file to comment on.</doc>
+					</param>
+					<param name="path" required="true" type="xsd:string" style="query">
+						<doc>Relative path of the file to comment on.</doc>
+					</param>
+					<param name="position" required="true" type="xsd:integer" style="query">
+						<doc>Line index in the diff to comment on.</doc>
+					</param>
+				</request>
+			</method>
+		</resource>
+
+		<resource path="repos/{user}/{repo}/commits/{sha}">
+			<param name="user" required="true" type="xsd:string" style="template">
+				<doc>Name of the user</doc>
+			</param>
+			<param name="repo" required="true" type="xsd:string" style="template">
+				<doc>Name of the repository</doc>
+			</param>
+			<param name="sha" required="true" type="xsd:string" style="template">
+				<doc>SHA of the commit</doc>
+			</param>
+			<method id="getCommit" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Repos</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/repos/commits/">
+					Get a single commit
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="repos/{user}/{repo}/commits">
+			<param name="user" required="true" type="xsd:string" style="template">
+				<doc>Name of the user</doc>
+			</param>
+			<param name="repo" required="true" type="xsd:string" style="template">
+				<doc>Name of the repository</doc>
+			</param>
+			<method id="listCommits" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Repos</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/repos/commits/">
+					List commits on a repository
+				</doc>
+				<request>
+					<param name="sha" required="false" type="xsd:string" style="query">
+						<doc>Sha or branch to start listing commits from.</doc>
+					</param>
+					<param name="path" required="false" type="xsd:string" style="query">
+						<doc>Only commits containing this file path will be returned.</doc>
+					</param>
+				</request>
+			</method>
+		</resource>
+
+		<resource path="repos/{user}/{repo}/commits/{sha}">
+			<param name="user" required="true" type="xsd:string" style="template">
+				<doc>Name of the user</doc>
+			</param>
+			<param name="repo" required="true" type="xsd:string" style="template">
+				<doc>Name of the repository</doc>
+			</param>
+			<param name="sha" required="true" type="xsd:string" style="template">
+				<doc>SHA of the commit</doc>
+			</param>
+			<method id="getCommit" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Repos</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/repos/commits/">
+					Get a single commit
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="repos/{user}/{repo}/compare/{base}...{head}">
+			<param name="user" required="true" type="xsd:string" style="template">
+				<doc>Name of the user</doc>
+			</param>
+			<param name="repo" required="true" type="xsd:string" style="template">
+				<doc>Name of the repository</doc>
+			</param>
+			<param name="base" required="true" type="xsd:string" style="template">
+				<doc></doc>
+			</param>
+			<param name="head" required="true" type="xsd:string" style="template">
+				<doc></doc>
+			</param>
+			<method id="compareCommits" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Repos</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/repos/commits/">
+					Compare two commits
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="repos/{user}/{repo}/readme">
+			<param name="user" required="true" type="xsd:string" style="template">
+				<doc>Name of the user</doc>
+			</param>
+			<param name="repo" required="true" type="xsd:string" style="template">
+				<doc>Name of the repository</doc>
+			</param>
+			<method id="getReadme" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Repos</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/repos/contents/">
+					This method returns the preferred README for a repository.
+				</doc>
+				<request>
+					<param name="ref" required="false" type="xsd:string" style="query" default="master">
+						<doc>The String name of the Commit/Branch/Tag.</doc>
+					</param>
+				</request>
+			</method>
+		</resource>
+
+		<resource path="repos/{user}/{repo}/contents/{path}">
+			<param name="user" required="true" type="xsd:string" style="template">
+				<doc>Name of the user</doc>
+			</param>
+			<param name="repo" required="true" type="xsd:string" style="template">
+				<doc>Name of the repository</doc>
+			</param>
+			<param name="path" required="true" type="xsd:string" style="template">
+				<doc>The content path</doc>
+			</param>
+			<method id="getContents" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Repos</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/repos/contents/">
+					This method returns the contents of any file or directory in a repository.
+				</doc>
+				<request>
+					<param name="ref" required="false" type="xsd:string" style="query" default="master">
+						<doc>The String name of the Commit/Branch/Tag.</doc>
+					</param>
+				</request>
+			</method>
+		</resource>
+
+		<resource path="repos/{user}/{repo}/{archive_format}/{ref}">
+			<param name="user" required="true" type="xsd:string" style="template">
+				<doc>Name of the user</doc>
+			</param>
+			<param name="repo" required="true" type="xsd:string" style="template">
+				<doc>Name of the repository</doc>
+			</param>
+			<param name="archive_format" required="true" type="xsd:string" style="template">
+				<doc>Either tarball or zipball</doc>
+			</param>
+			<method id="getArchive" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Repos</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/repos/contents/">
+					This method will return a 302 to a URL to download a tarball or zipball archive for a repository.
+				</doc>
+				<request>
+					<param name="ref" required="false" type="xsd:string" style="template" default="master">
+						<doc>Valid Git reference.</doc>
+					</param>
+				</request>
+			</method>
+		</resource>
+
+		<resource path="repos/{user}/{repo}/downloads">
+			<param name="user" required="true" type="xsd:string" style="template">
+				<doc>Name of the user</doc>
+			</param>
+			<param name="repo" required="true" type="xsd:string" style="template">
+				<doc>Name of the repository</doc>
+			</param>
+			<method id="listDownloads" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Repos</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/repos/downloads/">
+					List downloads for a repository
+				</doc>
+			</method>
+			<method id="createDownload" name="POST">
+				<apigee:tags>
+					<apigee:tag primary="true">Repos</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/repos/comments/">
+					Create a new download (Create the resource)
+				</doc>
+				<request>
+					<param name="name" required="true" type="xsd:string" style="query">
+						<doc></doc>
+					</param>
+					<param name="size" required="true" type="xsd:integer" style="query">
+						<doc>Size of file in bytes.</doc>
+					</param>
+					<param name="description" required="false" type="xsd:string" style="query">
+						<doc></doc>
+					</param>
+					<param name="content_type" required="false" type="xsd:string" style="query">
+						<doc></doc>
+					</param>
+				</request>
+			</method>
+		</resource>
+
+		<resource path="repos/{user}/{repo}/downloads/{id}">
+			<param name="user" required="true" type="xsd:string" style="template">
+				<doc>Name of the user</doc>
+			</param>
+			<param name="repo" required="true" type="xsd:string" style="template">
+				<doc>Name of the repository</doc>
+			</param>
+			<param name="id" required="true" type="xsd:string" style="template">
+				<doc>Download id</doc>
+			</param>
+			<method id="getDownload" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Repos</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/repos/downloads/">
+					Get a single download
+				</doc>
+			</method>
+			<method id="deleteDownload" name="DELETE">
+				<apigee:tags>
+					<apigee:tag primary="true">Repos</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/repos/downloads/">
+					Delete a download
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="repos/{user}/{repo}/forks">
+			<param name="user" required="true" type="xsd:string" style="template">
+				<doc>Name of the user</doc>
+			</param>
+			<param name="repo" required="true" type="xsd:string" style="template">
+				<doc>Name of the repository</doc>
+			</param>
+			<method id="listForks" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Repos</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/repos/forks/">
+					List forks
+				</doc>
+				<request>
+					<param name="sort" required="false" type="xsd:string" style="query" default="newest">
+						<doc>`newest`, `oldest` or `watchers`</doc>
+					</param>
+				</request>
+			</method>
+			<method id="fork" name="POST">
+				<apigee:tags>
+					<apigee:tag primary="true">Repos</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/repos/forks/">
+					Create a fork.
+					Forking a Repository happens asynchronously. Therefore, you may have to wait a short period before accessing the git objects.
+				</doc>
+				<request>
+					<param name="org" required="false" type="xsd:string" style="query">
+						<doc>Organization login. The repository will be forked into this organization.</doc>
+					</param>
+				</request>
+			</method>
+		</resource>
+
+		<resource path="repos/{user}/{repo}/keys">
+			<param name="user" required="true" type="xsd:string" style="template">
+				<doc>Name of the user</doc>
+			</param>
+			<param name="repo" required="true" type="xsd:string" style="template">
+				<doc>Name of the repository</doc>
+			</param>
+			<method id="listRepoKeys" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Repos</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/repos/keys/">
+					List keys.
+				</doc>
+			</method>
+			<method id="createRepoKey" name="POST">
+				<apigee:tags>
+					<apigee:tag primary="true">Repos</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/repos/keys/">
+					Create a key
+				</doc>
+				<request>
+					<param name="title" required="false" type="xsd:string" style="query">
+						<doc></doc>
+					</param>
+					<param name="key" required="false" type="xsd:string" style="query">
+						<doc>`ssh-rsa AAA...`</doc>
+					</param>
+				</request>
+			</method>
+		</resource>
+
+		<resource path="repos/{user}/{repo}/keys/{id}">
+			<param name="user" required="true" type="xsd:string" style="template">
+				<doc>Name of the user</doc>
+			</param>
+			<param name="repo" required="true" type="xsd:string" style="template">
+				<doc>Name of the repository</doc>
+			</param>
+			<param name="id" required="true" type="xsd:string" style="template">
+				<doc>Key id</doc>
+			</param>
+			<method id="getRepoKey" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Repos</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/repos/keys/">
+					Get a single key
+				</doc>
+			</method>
+			<method id="editRepoKey" name="PATCH">
+				<apigee:tags>
+					<apigee:tag primary="true">Repos</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/repos/keys/">
+					Update a key
+				</doc>
+				<request>
+					<param name="title" required="false" type="xsd:string" style="query">
+						<doc></doc>
+					</param>
+					<param name="key" required="false" type="xsd:string" style="query">
+						<doc>`ssh-rsa AAA...`</doc>
+					</param>
+				</request>
+			</method>
+			<method id="deleteRepoKey" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Repos</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/repos/keys/">
+					Delete a key
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="repos/{user}/{repo}/watchers">
+			<param name="user" required="true" type="xsd:string" style="template">
+				<doc>Name of the user</doc>
+			</param>
+			<param name="repo" required="true" type="xsd:string" style="template">
+				<doc>Name of the repository</doc>
+			</param>
+			<method id="listWatchers" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Repos</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/repos/watching/">
+					List watchers
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="repos/{user}/watched">
+			<param name="user" required="true" type="xsd:string" style="template">
+				<doc>Name of the user</doc>
+			</param>
+			<method id="listUserWatched" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Repos</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/repos/watching/">
+					List repos being watched by a user
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="repos/watched">
+			<param name="user" required="true" type="xsd:string" style="template">
+				<doc>Name of the user</doc>
+			</param>
+			<method id="listWatched" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Repos</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/repos/watching/">
+					List repos being watched by the authenticated user
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="repos/watched/{user}/{repo}">
+			<param name="user" required="true" type="xsd:string" style="template">
+				<doc>Name of the user</doc>
+			</param>
+			<param name="repo" required="true" type="xsd:string" style="template">
+				<doc>Name of the repository</doc>
+			</param>
+			<method id="checkUserWatched" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Repos</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/repos/watching/">
+					Check if you are watching a repo
+				</doc>
+			</method>
+			<method id="watch" name="PUT">
+				<apigee:tags>
+					<apigee:tag primary="true">Repos</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/repos/watching/">
+					Watch a repo
+				</doc>
+			</method>
+			<method id="unwatch" name="DELETE">
+				<apigee:tags>
+					<apigee:tag primary="true">Repos</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/repos/watching/">
+					Stop watching a repo
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="hooks">
+			<method id="hooks" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Repos</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/repos/hooks/">
+					List hooks services
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="repos/{user}/{repo}/hooks">
+			<param name="user" required="true" type="xsd:string" style="template">
+				<doc>Name of the user</doc>
+			</param>
+			<param name="repo" required="true" type="xsd:string" style="template">
+				<doc>Name of the repository</doc>
+			</param>
+			<method id="listHooks" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Repos</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/repos/hooks/">
+					List hooks
+				</doc>
+			</method>
+			<method id="createHook" name="POST">
+				<apigee:tags>
+					<apigee:tag primary="true">Repos</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/repos/hooks/">
+					Create a hook
+				</doc>
+				<request>
+					<param name="name" required="true" type="xsd:string" style="query">
+						<doc>The name of the service that is being called. See /hooks for the possible names.</doc>
+					</param>
+					<param name="config" required="true" type="xsd:object" style="query">
+						<doc>An object containing key/value pairs to provide settings for this hook. These settings vary between the services and are defined in the github-services repo. Booleans are stored internally as “1” for true, and “0” for false. Any JSON true/false values will be converted automatically.</doc>
+					</param>
+					<param name="events" required="false" type="xsd:array" style="query" default="['push']">
+						<doc>Determines what events the hook is triggered for.</doc>
+					</param>
+					<param name="active" required="false" type="xsd:boolean" style="query">
+						<doc>Determines whether the hook is actually triggered on pushes.</doc>
+					</param>
+				</request>
+			</method>
+		</resource>
+
+		<resource path="repos/{user}/{repo}/hooks/{id}">
+			<param name="user" required="true" type="xsd:string" style="template">
+				<doc>Name of the user</doc>
+			</param>
+			<param name="repo" required="true" type="xsd:string" style="template">
+				<doc>Name of the repository</doc>
+			</param>
+			<param name="id" required="true" type="xsd:string" style="template">
+				<doc>Hook id</doc>
+			</param>
+			<method id="getHook" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Repos</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/repos/hooks/">
+					Get single hook
+				</doc>
+			</method>
+			<method id="editHook" name="POST">
+				<apigee:tags>
+					<apigee:tag primary="true">Repos</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/repos/hooks/">
+					Create a hook
+				</doc>
+				<request>
+					<param name="name" required="true" type="xsd:string" style="query">
+						<doc>The name of the service that is being called. See /hooks for the possible names.</doc>
+					</param>
+					<param name="config" required="true" type="xsd:object" style="query">
+						<doc>An object containing key/value pairs to provide settings for this hook. These settings vary between the services and are defined in the github-services repo. Booleans are stored internally as “1” for true, and “0” for false. Any JSON true/false values will be converted automatically.</doc>
+					</param>
+					<param name="events" required="false" type="xsd:array" style="query" default="['push']">
+						<doc>Determines what events the hook is triggered for. This replaces the entire array of events.</doc>
+					</param>
+					<param name="add_events" required="false" type="xsd:array" style="query">
+						<doc>Determines a list of events to be added to the list of events that the Hook triggers for.</doc>
+					</param>
+					<param name="remove_events" required="false" type="xsd:array" style="query">
+						<doc>Determines a list of events to be added to the list of events that the Hook triggers for.</doc>
+					</param>
+					<param name="active" required="false" type="xsd:boolean" style="query">
+						<doc>Determines a list of events to be removed from the list of events that the Hook triggers for.</doc>
+					</param>
+				</request>
+			</method>
+			<method id="deleteHook" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Repos</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/repos/hooks/">
+					Delete a hook
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="repos/{user}/{repo}/hooks/{id}/test">
+			<param name="user" required="true" type="xsd:string" style="template">
+				<doc>Name of the user</doc>
+			</param>
+			<param name="repo" required="true" type="xsd:string" style="template">
+				<doc>Name of the repository</doc>
+			</param>
+			<param name="id" required="true" type="xsd:string" style="template">
+				<doc>Hook id</doc>
+			</param>
+			<method id="testHook" name="POST">
+				<apigee:tags>
+					<apigee:tag primary="true">Repos</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/repos/hooks/">
+					This will trigger the hook with the latest push to the current repository.
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="users/{user}">
+			<param name="user" required="true" type="xsd:string" style="template">
+				<doc>Name of the user</doc>
+			</param>
+			<method id="getUser" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Users</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/users/">
+					Get a single user
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="user">
+			<method id="me" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Users</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/users/">
+					Get the authenticated user
+				</doc>
+			</method>
+			<method id="editMe" name="POST">
+				<apigee:tags>
+					<apigee:tag primary="true">Users</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/users/">
+					Update the authenticated user
+				</doc>
+				<request>
+					<param name="name" required="true" type="xsd:string" style="query">
+						<doc></doc>
+					</param>
+					<param name="email" required="true" type="xsd:string" style="query">
+						<doc>Publicly visible email address.</doc>
+					</param>
+					<param name="blog" required="false" type="xsd:string" style="query">
+						<doc></doc>
+					</param>
+					<param name="company" required="false" type="xsd:string" style="query">
+						<doc></doc>
+					</param>
+					<param name="location" required="false" type="xsd:string" style="query">
+						<doc></doc>
+					</param>
+					<param name="hireable" required="false" type="xsd:boolean" style="query">
+						<doc></doc>
+					</param>
+					<param name="bio" required="false" type="xsd:string" style="query">
+						<doc></doc>
+					</param>
+				</request>
+			</method>
+		</resource>
+
+		<resource path="user/emails">
+			<method id="listEmails" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Users</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/users/emails/">
+					List email addresses for a user
+				</doc>
+			</method>
+			<method id="addEmails" name="POST">
+				<apigee:tags>
+					<apigee:tag primary="true">Users</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/users/emails/">
+					Add email address(es)
+				</doc>
+				<!-- Params: array of emails -->
+			</method>
+			<method id="removeEmails" name="DELETE">
+				<apigee:tags>
+					<apigee:tag primary="true">Users</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/users/emails/">
+					Remove email address(es)
+				</doc>
+				<!-- Params: array of emails -->
+			</method>
+		</resource>
+
+		<resource path="users/{user}/followers">
+			<param name="user" required="true" type="xsd:string" style="template">
+				<doc>Name of the user</doc>
+			</param>
+			<param name="repo" required="true" type="xsd:string" style="template">
+				<doc>Name of the repository</doc>
+			</param>
+			<method id="listWatchers" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Users</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/users/followers/">
+					List a user’s followers
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="user/followers">
+			<method id="listWatched" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Users</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/users/followers/">
+					List the authenticated user’s followers
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="users/{user}/following">
+			<param name="user" required="true" type="xsd:string" style="template">
+				<doc>Name of the user</doc>
+			</param>
+			<method id="listUserFollowing" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Users</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/users/followers/">
+					List who a user is following
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="user/following">
+			<method id="listFollowing" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Users</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/users/followers/">
+					List who the authenticated user is following
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="user/following/{user}">
+			<param name="user" required="true" type="xsd:string" style="template">
+				<doc>Name of the user</doc>
+			</param>
+			<method id="checkUserWatched" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Users</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/users/followers/">
+					Check if you are following a user
+				</doc>
+			</method>
+			<method id="follow" name="PUT">
+				<apigee:tags>
+					<apigee:tag primary="true">Users</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/users/followers/">
+					Follow a user
+				</doc>
+			</method>
+			<method id="unfollow" name="DELETE">
+				<apigee:tags>
+					<apigee:tag primary="true">Users</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/users/followers/">
+					Unfollow a user
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="user/keys">
+			<method id="listKeys" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Users</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/users/keys/">
+					List public keys
+				</doc>
+			</method>
+			<method id="createKey" name="POST">
+				<apigee:tags>
+					<apigee:tag primary="true">Users</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/users/keys/">
+					Create a public key
+				</doc>
+				<request>
+					<param name="title" required="false" type="xsd:string" style="query">
+						<doc></doc>
+					</param>
+					<param name="key" required="false" type="xsd:string" style="query">
+						<doc>`ssh-rsa AAA...`</doc>
+					</param>
+				</request>
+			</method>
+		</resource>
+
+		<resource path="user/keys/{id}">
+			<param name="id" required="true" type="xsd:string" style="template">
+				<doc>Key id</doc>
+			</param>
+			<method id="getKey" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Users</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/users/keys/">
+					Get a single public key
+				</doc>
+			</method>
+			<method id="editKey" name="PATCH">
+				<apigee:tags>
+					<apigee:tag primary="true">Users</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/users/keys/">
+					Update a public key
+				</doc>
+				<request>
+					<param name="title" required="false" type="xsd:string" style="query">
+						<doc></doc>
+					</param>
+					<param name="key" required="false" type="xsd:string" style="query">
+						<doc>`ssh-rsa AAA...`</doc>
+					</param>
+				</request>
+			</method>
+			<method id="deleteKey" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Users</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/users/keys/">
+					Delete a public key
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="events">
+			<method id="listEvents" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Events</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/events/">
+					List public events
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="repos/{user}/{repo}/events">
+			<param name="user" required="true" type="xsd:string" style="template">
+				<doc>Name of the user</doc>
+			</param>
+			<param name="repo" required="true" type="xsd:string" style="template">
+				<doc>Name of the repository</doc>
+			</param>
+			<method id="listRepoEvents" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Events</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/events/">
+					List repository events
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="repos/{user}/{repo}/issues/events">
+			<param name="user" required="true" type="xsd:string" style="template">
+				<doc>Name of the user</doc>
+			</param>
+			<param name="repo" required="true" type="xsd:string" style="template">
+				<doc>Name of the repository</doc>
+			</param>
+			<method id="listIssuesEvents" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Events</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/events/">
+					List issue events for a repository
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="networks/{user}/{repo}/events">
+			<param name="user" required="true" type="xsd:string" style="template">
+				<doc>Name of the user</doc>
+			</param>
+			<param name="repo" required="true" type="xsd:string" style="template">
+				<doc>Name of the repository</doc>
+			</param>
+			<method id="listNetworksEvents" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Events</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/events/">
+					List public events for a network of repositories
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="orgs/{org}/events">
+			<param name="org" required="true" type="xsd:string" style="template">
+				<doc>Name of the organization</doc>
+			</param>
+			<method id="listOrgPublicEvents" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Events</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/events/">
+					List public events for an organization
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="users/{user}/received_events">
+			<param name="user" required="true" type="xsd:string" style="template">
+				<doc>Name of the user</doc>
+			</param>
+			<method id="listUserReceivedEvents" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Events</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/events/">
+					List events that a user has received.
+					These are events that you’ve received by watching repos and following users. If you are authenticated as the given user, you will see private events. Otherwise, you’ll only see public events.
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="users/{user}/received_events/public">
+			<param name="user" required="true" type="xsd:string" style="template">
+				<doc>Name of the user</doc>
+			</param>
+			<method id="listUserPublicReceivedEvents" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Events</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/events/">
+					List public events that a user has received
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="users/{user}/events">
+			<param name="user" required="true" type="xsd:string" style="template">
+				<doc>Name of the user</doc>
+			</param>
+			<method id="listUserEvents" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Events</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/events/">
+					List events performed by a user.
+					If you are authenticated as the given user, you will see your private events. Otherwise, you’ll only see public events.
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="users/{user}/events/public">
+			<param name="user" required="true" type="xsd:string" style="template">
+				<doc>Name of the user</doc>
+			</param>
+			<method id="listUserPublicEvents" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Events</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/events/">
+					List public events performed by a user
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="users/{user}/events/orgs/{org}">
+			<param name="user" required="true" type="xsd:string" style="template">
+				<doc>Name of the user</doc>
+			</param>
+			<param name="org" required="true" type="xsd:string" style="template">
+				<doc>Name of the organization</doc>
+			</param>
+			<method id="listOrgEvents" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Events</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/events/">
+					List events for an organization.
+					This is the user’s organization dashboard. You must be authenticated as the user to view this.
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="legacy/issues/search/{user}/{repo}/{state}/{keyword}">
+			<param name="user" required="true" type="xsd:string" style="template">
+				<doc>Name of the user</doc>
+			</param>
+			<param name="repo" required="true" type="xsd:string" style="template">
+				<doc>Name of the repository</doc>
+			</param>
+			<param name="state" required="true" type="xsd:string" style="template">
+				<doc>`open` or `closed`</doc>
+			</param>
+			<param name="keyword" required="true" type="xsd:string" style="template">
+				<doc>Search term</doc>
+			</param>
+			<method id="searchIssues" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Search</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/search/">
+					Find issues by state and keyword.
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="legacy/repos/search/{keyword}">
+			<param name="keyword" required="true" type="xsd:string" style="template">
+				<doc>Search term</doc>
+			</param>
+			<method id="searchRepos" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Search</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/search/">
+					Find repositories by keyword. Note, this legacy method does not follow the v3 pagination pattern. This method returns up to 100 results per page and pages can be fetched using the `start_page` parameter.
+				</doc>
+				<request>
+					<param name="language" required="false" type="xsd:string" style="query">
+						<doc>Filter results by language</doc>
+					</param>
+					<param name="start_page" required="false" type="xsd:string" style="query">
+						<doc>Page number to fetch</doc>
+					</param>
+				</request>
+			</method>
+		</resource>
+
+		<resource path="legacy/user/search/{keyword}">
+			<param name="keyword" required="true" type="xsd:string" style="template">
+				<doc>Search term</doc>
+			</param>
+			<method id="searchUsers" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Search</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/search/">
+					Find users by keyword.
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="legacy/user/email/{email}">
+			<param name="email" required="true" type="xsd:string" style="template">
+				<doc>Email address</doc>
+			</param>
+			<method id="searchEmails" name="GET">
+				<apigee:tags>
+					<apigee:tag primary="true">Search</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/search/">
+					Email search.
+					This API call is added for compatibility reasons only. There’s no guarantee that full email searches will always be available.
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="markdown">
+			<method id="markdown" name="POST">
+				<apigee:tags>
+					<apigee:tag primary="true">Markdown</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/markdown/">
+					Render an arbritrary Markdown document
+				</doc>
+				<request>
+					<param name="text" required="true" type="xsd:string" style="query">
+						<doc>The Markdown text to render</doc>
+					</param>
+					<param name="mode" required="false" type="xsd:string" style="query">
+						<doc>
+							The rendering mode.
+
+							- `markdown` to render a document as plain Markdown, just like README files are rendered.
+							- `gfm` to render a document as user-content, e.g. like user comments or issues are rendered. In GFM mode, hard line breaks are always taken into account, and issue and user mentions are linked accordingly.
+						</doc>
+					</param>
+					<param name="context" required="false" type="xsd:string" style="query">
+						<doc>The repository context, only taken into account when rendering as `gfm`</doc>
+					</param>
+				</request>
+			</method>
+		</resource>
+
+		<resource path="markdown/raw">
+			<method id="markdownRaw" name="POST">
+				<apigee:tags>
+					<apigee:tag primary="true">Markdown</apigee:tag>
+				</apigee:tags>
+				<webshell:authentication required="false"/>
+				<doc title="" apigee:url="http://developer.github.com/v3/markdown/">
+					The raw API it not JSON-based. It takes a Markdown document as plaintext (text/plain or text/x-markdown) and renders it as plain Markdown without a repository context (just like a README.md file is rendered – this is the simplest way to preview a readme online).
+				</doc>
+				<request>
+					<representation mediaType="text/x-markdown"/>
+				</request>
+			</method>
+		</resource>
+
 	</resources>
 
 </application>

@@ -52,7 +52,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Gist</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc apigee:url="http://developer.github.com/v3/gists/">
 					List the authenticated user’s starred gists
 				</doc>
@@ -76,9 +76,9 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Gist</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/gists/">
-					Get a single gist
+					Edit a gist
 
 					NOTE: All files from the previous version of the gist are carried over by default if not included in the hash. Deletes can be performed by including the filename with a null hash.
 				</doc>
@@ -98,7 +98,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Gist</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/gists/">
 					Delete a gist
 				</doc>
@@ -119,7 +119,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Gist</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/gists/">
 					Create a gist
 				</doc>
@@ -143,7 +143,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Gist</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/gists/">
 					Star a gist
 				</doc>
@@ -152,7 +152,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Gist</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/gists/">
 					Unstar a gist
 				</doc>
@@ -167,7 +167,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Gist</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/gists/">
 					Fork a gist
 				</doc>
@@ -191,7 +191,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Gist</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/gists/comments/">
 					Create a comment
 				</doc>
@@ -220,7 +220,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Gist</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/gists/comments/">
 					Edit a comment
 				</doc>
@@ -230,11 +230,11 @@
 					</param>
 				</request>
 			</method>
-			<method id="gistDeleteComment" name="GET">
+			<method id="gistDeleteComment" name="DELETE">
 				<apigee:tags>
 					<apigee:tag primary="true">Gist</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/gists/comments/">
 					Delete a comment
 				</doc>
@@ -273,7 +273,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Blobs</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/git/blobs/">
 					Create a Blob
 				</doc>
@@ -320,7 +320,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Commits</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/git/commits/">
 					Create a Commit
 				</doc>
@@ -415,7 +415,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">References</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/git/refs/">
 					Delete a Reference
 				</doc>
@@ -448,7 +448,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">References</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/git/refs/">
 					Create a Reference
 				</doc>
@@ -495,7 +495,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Tags</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/git/tags/">
 					Create a Tag Object.
 					Note that creating a tag object does not create the reference that makes a tag in Git. If you want to create an annotated tag in Git, you have to do this call to create the tag object, and then create the `refs/tags/[tag]` reference. If you want to create a lightweight tag, you simply have to create the reference - this call would be unnecessary.
@@ -582,7 +582,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Trees</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/git/trees/">
 					Create a Tree.
 					The tree creation API will take nested entries as well. If both a tree and a nested path modifying that tree are specified, it will overwrite the contents of that tree with the new path contents and write a new tree out.
@@ -701,7 +701,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Issues</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/issues/">
 					Create an issue
 				</doc>
@@ -748,7 +748,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Issues</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/issues/">
 					Create an issue
 				</doc>
@@ -798,7 +798,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Issues</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/issues/comments/">
 					Create a comment on an issue
 				</doc>
@@ -836,7 +836,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Issues</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/issues/comments/">
 					Edit a comment on an issue
 				</doc>
@@ -846,11 +846,11 @@
 					</param>
 				</request>
 			</method>
-			<method id="deleteIssueComment" name="GET">
+			<method id="deleteIssueComment" name="DELETE">
 				<apigee:tags>
 					<apigee:tag primary="true">Issues</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/issues/comments/">
 					Delete a comment on an issue
 				</doc>
@@ -940,7 +940,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Issues</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/issues/labels/">
 					Add labels to an issue
 				</doc>
@@ -950,7 +950,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Issues</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/issues/labels/">
 					Replace all labels for an issue
 				</doc>
@@ -960,7 +960,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Issues</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/issues/labels/">
 					Remove all labels from an issue
 				</doc>
@@ -984,7 +984,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Issues</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/issues/labels/">
 					Remove a label from an issue
 				</doc>
@@ -1011,7 +1011,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Issues</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/issues/labels/">
 					Create a label
 				</doc>
@@ -1049,7 +1049,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Issues</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/issues/labels/">
 					Update a label
 				</doc>
@@ -1066,7 +1066,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Issues</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/issues/labels/">
 					Delete a label
 				</doc>
@@ -1114,7 +1114,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Issues</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/issues/milestones/">
 					Create a milestone
 				</doc>
@@ -1158,7 +1158,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Issues</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/issues/milestones/">
 					Update a milestone
 				</doc>
@@ -1177,11 +1177,11 @@
 					</param>
 				</request>
 			</method>
-			<method id="deleteMilestone" name="GET">
+			<method id="deleteMilestone" name="DELETE">
 				<apigee:tags>
 					<apigee:tag primary="true">Issues</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/issues/milestones/">
 					Delete a milestone
 				</doc>
@@ -1285,7 +1285,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Orgs</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="true"/>
+				<webshell:authentication required="false"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/orgs/members/">
 					Get member.
 				</doc>
@@ -1329,7 +1329,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Orgs</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="true"/>
+				<webshell:authentication required="false"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/orgs/members/">
 					Get if a user is a public member.
 				</doc>
@@ -1433,7 +1433,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Orgs</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/orgs/teams/">
 					Delete a team.
 					In order to delete a team, the authenticated user must be an owner of the org that the team is associated with.
@@ -1449,7 +1449,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Orgs</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/orgs/teams/">
 					List team members.
 					In order to list members in a team, the authenticated user must be a member of the team.
@@ -1478,7 +1478,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Orgs</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/orgs/teams/">
 					Add team member.
 					In order to add a user to a team, the authenticated user must have `admin` permissions to the team or be an owner of the org that the team is associated with.
@@ -1525,7 +1525,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Orgs</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="true"/>
+				<webshell:authentication required="false"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/orgs/teams/">
 					Get team repo.
 				</doc>
@@ -1534,7 +1534,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Orgs</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/orgs/teams/">
 					Add team repo.
 					In order to add a repo to a team, the authenticated user must be an owner of the org that the team is associated with. Also, the repo must be owned by the organization, or a direct for of a repo owned by the organization.
@@ -1578,7 +1578,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Pull requests</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/orgs/pulls/">
 					Create a pull request.
 					NOTE: `head` and `base` can be either a sha or a branch name. Typically you would namespace `head` with a user like this: `username:branch`.
@@ -1602,7 +1602,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Pull requests</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/orgs/pulls/">
 					Create a pull request from an existing Issue.
 				</doc>
@@ -1634,7 +1634,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Pull requests</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/orgs/pulls/">
 					Update a pull request.
 					NOTE: `head` and `base` can be either a sha or a branch name. Typically you would namespace `head` with a user like this: `username:branch`.
@@ -1718,7 +1718,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Pull requests</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/orgs/pulls/">
 					Merge a pull request
 				</doc>
@@ -1753,7 +1753,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Pull requests</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/issues/pulls/">
 					Create a comment on a pull request
 				</doc>
@@ -1791,7 +1791,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Pull requests</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/pulls/comments/">
 					Edit a comment on a pull request
 				</doc>
@@ -1801,11 +1801,11 @@
 					</param>
 				</request>
 			</method>
-			<method id="deletePullRequestComment" name="GET">
+			<method id="deletePullRequestComment" name="DELETE">
 				<apigee:tags>
 					<apigee:tag primary="true">Pull requests</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/pulls/comments/">
 					Delete a comment on a pull request
 				</doc>
@@ -1837,7 +1837,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Repos</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/issues/repos/">
 					Create a new repository for the authenticated user.
 				</doc>
@@ -1878,7 +1878,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Repos</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="true"/>
+				<webshell:authentication required="false"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/repos/">
 					List public repositories for the specified user.
 				</doc>
@@ -1904,7 +1904,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Repos</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="true"/>
+				<webshell:authentication required="false"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/repos/">
 					List repositories for the specified org.
 				</doc>
@@ -1924,7 +1924,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Repos</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/issues/repos/">
 					Create a new repository in this organization. The authenticated user must be a member of `org`.
 				</doc>
@@ -1968,7 +1968,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Repos</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="true"/>
+				<webshell:authentication required="false"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/repos/">
 					Get a repository.
 				</doc>
@@ -1977,7 +1977,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Repos</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/issues/repos/">
 					Edit a repository.
 				</doc>
@@ -2031,7 +2031,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Repos</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="true"/>
+				<webshell:authentication required="false"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/repos/">
 					List repository contributors
 				</doc>
@@ -2054,7 +2054,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Repos</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="true"/>
+				<webshell:authentication required="false"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/repos/">
 					List repository languages
 				</doc>
@@ -2072,7 +2072,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Repos</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="true"/>
+				<webshell:authentication required="false"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/repos/">
 					List repository teams
 				</doc>
@@ -2090,7 +2090,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Repos</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="true"/>
+				<webshell:authentication required="false"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/repos/">
 					List repository tags
 				</doc>
@@ -2108,7 +2108,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Repos</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="true"/>
+				<webshell:authentication required="false"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/repos/">
 					List repository branches
 				</doc>
@@ -2129,7 +2129,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Repos</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="true"/>
+				<webshell:authentication required="false"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/repos/">
 					Get a repository branch
 				</doc>
@@ -2147,7 +2147,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Repos</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="true"/>
+				<webshell:authentication required="false"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/repos/collaborators/">
 					List repository collaborators
 				</doc>
@@ -2168,7 +2168,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Repos</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="true"/>
+				<webshell:authentication required="false"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/repos/collaborators/">
 					Check if a user is a collaborator
 				</doc>
@@ -2177,7 +2177,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Repos</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/issues/repos/collaborators/">
 					Add a collaborator
 				</doc>
@@ -2235,7 +2235,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Repos</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/repos/comments/">
 					Update a commit comment
 				</doc>
@@ -2245,7 +2245,7 @@
 					</param>
 				</request>
 			</method>
-			<method id="deleteCommitComment" name="GET">
+			<method id="deleteCommitComment" name="DELETE">
 				<apigee:tags>
 					<apigee:tag primary="true">Repos</apigee:tag>
 				</apigee:tags>
@@ -2279,7 +2279,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Repos</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/repos/comments/">
 					Create a commit comment
 				</doc>
@@ -2490,7 +2490,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Repos</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/repos/comments/">
 					Create a new download (Create the resource)
 				</doc>
@@ -2534,7 +2534,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Repos</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/repos/downloads/">
 					Delete a download
 				</doc>
@@ -2566,7 +2566,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Repos</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/repos/forks/">
 					Create a fork.
 					Forking a Repository happens asynchronously. Therefore, you may have to wait a short period before accessing the git objects.
@@ -2637,7 +2637,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Repos</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/repos/keys/">
 					Update a key
 				</doc>
@@ -2650,11 +2650,11 @@
 					</param>
 				</request>
 			</method>
-			<method id="deleteRepoKey" name="GET">
+			<method id="deleteRepoKey" name="DELETE">
 				<apigee:tags>
 					<apigee:tag primary="true">Repos</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/repos/keys/">
 					Delete a key
 				</doc>
@@ -2729,7 +2729,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Repos</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/repos/watching/">
 					Watch a repo
 				</doc>
@@ -2738,7 +2738,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Repos</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/repos/watching/">
 					Stop watching a repo
 				</doc>
@@ -2777,7 +2777,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Repos</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/repos/hooks/">
 					Create a hook
 				</doc>
@@ -2821,7 +2821,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Repos</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/repos/hooks/">
 					Create a hook
 				</doc>
@@ -2846,11 +2846,11 @@
 					</param>
 				</request>
 			</method>
-			<method id="deleteHook" name="GET">
+			<method id="deleteHook" name="DELETE">
 				<apigee:tags>
 					<apigee:tag primary="true">Repos</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/repos/hooks/">
 					Delete a hook
 				</doc>
@@ -2871,7 +2871,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Repos</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/repos/hooks/">
 					This will trigger the hook with the latest push to the current repository.
 				</doc>
@@ -2907,7 +2907,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Users</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/users/">
 					Update the authenticated user
 				</doc>
@@ -2942,7 +2942,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Users</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/users/emails/">
 					List email addresses for a user
 				</doc>
@@ -2951,7 +2951,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Users</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/users/emails/">
 					Add email address(es)
 				</doc>
@@ -2961,7 +2961,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Users</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/users/emails/">
 					Remove email address(es)
 				</doc>
@@ -2992,7 +2992,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Users</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/users/followers/">
 					List the authenticated user’s followers
 				</doc>
@@ -3019,7 +3019,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Users</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/users/followers/">
 					List who the authenticated user is following
 				</doc>
@@ -3034,7 +3034,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Users</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/users/followers/">
 					Check if you are following a user
 				</doc>
@@ -3043,7 +3043,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Users</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/users/followers/">
 					Follow a user
 				</doc>
@@ -3052,7 +3052,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Users</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/users/followers/">
 					Unfollow a user
 				</doc>
@@ -3064,7 +3064,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Users</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/users/keys/">
 					List public keys
 				</doc>
@@ -3073,7 +3073,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Users</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/users/keys/">
 					Create a public key
 				</doc>
@@ -3096,7 +3096,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Users</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/users/keys/">
 					Get a single public key
 				</doc>
@@ -3105,7 +3105,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Users</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/users/keys/">
 					Update a public key
 				</doc>
@@ -3118,11 +3118,11 @@
 					</param>
 				</request>
 			</method>
-			<method id="deleteKey" name="GET">
+			<method id="deleteKey" name="DELETE">
 				<apigee:tags>
 					<apigee:tag primary="true">Users</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/users/keys/">
 					Delete a public key
 				</doc>
@@ -3283,7 +3283,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Events</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/events/">
 					List events for an organization.
 					This is the user’s organization dashboard. You must be authenticated as the user to view this.
@@ -3374,7 +3374,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Markdown</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/markdown/">
 					Render an arbritrary Markdown document
 				</doc>
@@ -3402,7 +3402,7 @@
 				<apigee:tags>
 					<apigee:tag primary="true">Markdown</apigee:tag>
 				</apigee:tags>
-				<webshell:authentication required="false"/>
+				<webshell:authentication required="true"/>
 				<doc title="" apigee:url="http://developer.github.com/v3/markdown/">
 					The raw API it not JSON-based. It takes a Markdown document as plaintext (text/plain or text/x-markdown) and renders it as plain Markdown without a repository context (just like a README.md file is rendered – this is the simplest way to preview a readme online).
 				</doc>
